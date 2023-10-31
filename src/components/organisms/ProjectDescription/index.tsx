@@ -5,9 +5,11 @@ import { ReactElement } from 'react';
 
 interface ProjectDescriptionProps {
   descriptionComponent?: ReactElement;
+  title1?: string;
+  title2?: string;
 }
 
-export default function ProjectDescription({ descriptionComponent }: ProjectDescriptionProps) {
+export default function ProjectDescription({ descriptionComponent, title1, title2 }: ProjectDescriptionProps) {
   const theme = useTheme();
   return (
     <>
@@ -35,7 +37,7 @@ export default function ProjectDescription({ descriptionComponent }: ProjectDesc
                   textTransform: 'uppercase',
                 }}
               >
-                O que
+                {title1}
               </Typography>
               <Typography
                 color={theme.palette.text.secondary}
@@ -46,7 +48,7 @@ export default function ProjectDescription({ descriptionComponent }: ProjectDesc
                   paddingLeft: '94px'
                 }}
               >
-                Produzimos
+                {title2}
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>

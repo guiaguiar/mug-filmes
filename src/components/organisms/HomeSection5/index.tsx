@@ -40,7 +40,7 @@ export default function HomeSection5() {
           </Grid>
 
           <Grid item display="flex" justifyContent="center" xs={12} pt={10}>
-            <CustomButton label='Compartilhe seu projeto com a MUG' />
+            <CustomButton label='FAÇA SEU ORÇAMENTO' />
           </Grid>
 
         </Grid>

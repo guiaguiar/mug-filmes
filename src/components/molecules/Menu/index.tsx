@@ -1,20 +1,23 @@
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 
-import logo from '@/assets/logo-menu.png';
+import logo from '@/assets/brand/MUG_Logo_Azul.png';
+import CustomButton from '@/components/atoms/CustomButton';
 import SectionBody from '@/components/atoms/SectionBody';
 
-export default function Menu() {
+interface MenuProps {
+  isHome?: boolean;
+}
+
+export default function Menu({ isHome }: MenuProps) {
   return (
     <Box sx={{
-      // backgroundColor: "primary.main",
       height: 100,
-      paddingTop: 3,
       display: 'flex',
       justifyContent: 'center',
     }}>
-      <Box display={'flex'} alignItems={'center'} left={"44px"}>
-        <Image src={logo} width={353} height={128} alt="" quality={100} priority />
+      <Box display={'flex'} position="relative" width={{xs: "150px", md: "280px"}} minWidth={{xs: "150px", md: "280px"}} alignItems={'center'} left={"44px"}>
+        <Image src={logo} fill style={{ objectFit: 'contain' }} alt="" quality={100} priority />
       </Box>
       <SectionBody>
         <Box sx={{
@@ -24,17 +27,16 @@ export default function Menu() {
           width: '100%'
         }}>
           <Box sx={{
-            display: {xs: 'none', lg: 'flex'},
+            display: { xs: 'none', lg: 'flex' },
             columnGap: '108px',
             alignItems: 'center',
           }}>
-            <Typography color="text.secondary">sobre</Typography>
+            {!!isHome && <Typography color="text.secondary">sobre</Typography>}
             <Typography color="text.secondary">projetos</Typography>
-            <Typography color="text.secondary">contato</Typography>
+            <CustomButton label='FAÇA SEU ORÇAMENTO' />
           </Box>
         </Box>
       </SectionBody>
-
     </Box>
   )
 }

@@ -14,17 +14,19 @@ const CustomButton: React.FC<ButtonProps> = ({ label }) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       sx={{
-        height: '46px',
-        borderRadius: '10px',
-        border: `2px solid ${theme.palette.primary.main}`,
-        fontSize: '24px',
+        height: '36px',
+        fontSize: '16px',
+        borderRadius: 0,
+        fontWeight: 400,
         display: 'flex',
         paddingRight: 3,
         paddingLeft: 3,
-        // ':hover': {
-        //   backgroundColor: colors.orange,
-        //   color: `${colors.black} !important`
-        // }
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.text.primary,
+        ':hover': {
+          backgroundColor: '#00277A',
+          color: theme.palette.text.primary,
+        }
       }}
     >
         {label}
