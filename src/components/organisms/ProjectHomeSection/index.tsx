@@ -3,6 +3,7 @@ import SectionBodyFullScreen from '@/components/atoms/SectionBodyFullScreen';
 import { ChevronLeft } from '@mui/icons-material';
 import { Box, Grid, IconButton, Link, Typography, useTheme } from '@mui/material';
 import Image, { StaticImageData } from 'next/image';
+import { useRouter } from 'next/navigation';
 import { ReactElement } from 'react';
 
 
@@ -17,6 +18,8 @@ interface ProjectHomeSectionProps {
 
 export default function ProjectHomeSection({ descriptionComponent, title, subtitle, img, imgPosition, year }: ProjectHomeSectionProps) {
   const theme = useTheme();
+  const router = useRouter();
+
   return (
     <>
       <SectionBody>
@@ -25,18 +28,23 @@ export default function ProjectHomeSection({ descriptionComponent, title, subtit
           alignItems: 'center',
           pb: '50px'
         }}>
-          <IconButton size='small' sx={{
-            svg: {
-              color: theme.palette.text.secondary
-            }
-          }}>
+          <IconButton
+            onClick={() => router.push('/')}
+            size='small' sx={{
+              svg: {
+                color: theme.palette.text.secondary
+              }
+            }}>
             <ChevronLeft width={10} height={10} />
-          </IconButton>
-          <Link sx={{
-            fontWeight: 400,
-            fontSize: '20px',
-            textDecoration: 'none'
-          }}>
+          </IconButton
+          >
+          <Link
+            sx={{
+              fontWeight: 400,
+              fontSize: '20px',
+              textDecoration: 'none'
+            }}
+          >
             Voltar
           </Link>
         </Box>
@@ -54,8 +62,8 @@ export default function ProjectHomeSection({ descriptionComponent, title, subtit
           backgroundColor: 'secondary.main',
           display: "flex",
           justifyContent: 'center',
-          paddingTop: '135px',
-          paddingBottom: '120px',
+          paddingTop: { xs: '64px', md: '135px' },
+          paddingBottom: { xs: '57px', md: '120px' },
           span: {
             fontWeight: 700
           }
@@ -67,15 +75,15 @@ export default function ProjectHomeSection({ descriptionComponent, title, subtit
             <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <Typography
                 color={theme.palette.text.secondary}
-                style={{
-                  fontSize: '50px',
+                sx={{
+                  fontSize: { xs: '42px', md: '50px' },
                   fontWeight: 400,
                   textTransform: 'uppercase',
                 }}
               >
                 {title}
               </Typography>
-              <Box>
+              <Box pb={{ xs: 4, md: 0 }}>
                 <Typography
                   color={theme.palette.text.secondary}
                   style={{

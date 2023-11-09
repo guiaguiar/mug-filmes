@@ -1,22 +1,28 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Grid, Typography, useTheme } from '@mui/material';
 
+import logo from '@/assets/brand/MUG_Branco.png';
 import SectionBody from '@/components/atoms/SectionBody';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
+  const theme = useTheme();
+
   return (
     <Box sx={{
       backgroundColor: "primary.main",
-      height: '399px'
+      minHeight: '410px'
     }}>
       <SectionBody>
-        <Box sx={{
-          height: 32,
-          display: 'flex',
-          justifyContent: 'space-between',
-          width: '100%',
-          pt: '86px'
-        }}>
+        <Grid container
+          sx={{
+            height: 32,
+            display: 'flex',
+            justifyContent: 'space-between',
+            width: '100%',
+            pt: '86px'
+          }}
+        >
           <Box sx={{
             display: "flex",
             flexDirection: "column",
@@ -28,15 +34,27 @@ export default function Footer() {
             display: "flex",
             flexDirection: "column",
           }}>
-            <Link href="" color="text.primary" style={{
-              fontSize: '20px'
-            }}>Instagram</Link>
-            <Link href="" color="text.primary" style={{
-              fontSize: '20px'
-            }}>Vimeo</Link>
-            <Link href="" color="text.primary" style={{
-              fontSize: '20px'
-            }}>Linkedin</Link>
+            <Link
+              href=""
+            >
+              <Typography fontSize={20} color="text.primary">
+                Instagram
+              </Typography>
+            </Link>
+            <Link
+              href=""
+            >
+              <Typography fontSize={20} color="text.primary">
+                Vimeo
+              </Typography>
+            </Link>
+            <Link
+              href=""
+            >
+              <Typography fontSize={20} color="text.primary">
+                Linkedin
+              </Typography>
+            </Link>
           </Box>
           <Box sx={{
             display: "flex",
@@ -45,7 +63,15 @@ export default function Footer() {
             <Typography color="text.primary" fontSize={"20px"}>(11) 91234 5678</Typography>
             <Typography color="text.primary" fontSize={"20px"}>contato@mugfilmes.com.br</Typography>
           </Box>
-        </Box>
+          <Grid item xs={12} pt="50px">
+            <Box position={'relative'} display="flex" alignItems={"center"} justifyContent={"center"} flexDirection={"column"}>
+              <Image src={logo} height={74} width={73} alt="" />
+              <Typography pt={2} color="text.primary" fontSize={"12px"} fontWeight={400}>Mug Filmes 2023</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+
+
       </SectionBody>
     </Box>
   )

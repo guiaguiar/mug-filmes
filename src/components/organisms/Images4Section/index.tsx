@@ -29,7 +29,7 @@ export default function Images4Section({ imgArray, emphasis }: Images4SectionPro
               return (
                 <Grid item xs={12} key={i}>
                   <Box sx={{ position: 'relative', width: '100%', height: '643px' }}>
-                    <Image src={item} fill alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
+                    <Image src={item} quality={50} fill alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
                   </Box>
                 </Grid>
               )
@@ -37,7 +37,7 @@ export default function Images4Section({ imgArray, emphasis }: Images4SectionPro
             return (
               <Grid item xs={12} md={emphasis ? 4 : 6} key={i}>
                 <Box sx={{ position: 'relative', width: '100%', height: '310px' }}>
-                  <Image src={item} fill alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
+                  <Image quality={50} src={item} fill alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
                 </Box>
               </Grid>
             )

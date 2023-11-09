@@ -16,7 +16,7 @@ const images = [
   {
     title: 'Sanit Engenharia',
     image: image1,
-    url: 'sait-engenharia'
+    url: 'sanit-engenharia'
   },
   {
     title: 'Zona de Criação',

@@ -5,16 +5,18 @@ import { Box, Typography, useTheme } from '@mui/material';
 interface BigVideoSectionProps {
   title?: string;
   title2?: string;
+  subtitle?: string;
   link?: string;
 }
 
-export default function BigVideoSection({ title, title2, link }: BigVideoSectionProps) {
+export default function BigVideoSection({ title, title2, link, subtitle }: BigVideoSectionProps) {
   const theme = useTheme();
   return (
     <SectionBody>
-      <Box sx={{ pb: '80px' }}>
-        <Typography textAlign="center" color="text.secondary" fontSize={"50px"} lineHeight={1}  pb={3}>{title}</Typography>
-        <Typography textAlign="center" color="text.secondary" fontSize={"50px"} lineHeight={1} >{title2}</Typography>
+      <Box sx={{ pb: {xs: '20px', md: '80px'} }}>
+        <Typography textAlign="center" color="text.secondary" fontSize={{ xs: '42px', md: "50px" }} lineHeight={1} pb={3}>{title}</Typography>
+        <Typography textAlign="center" color="text.secondary" fontSize={{ xs: '42px', md: "50px" }} lineHeight={1}>{title2}</Typography>
+        <Typography textAlign="center" color="text.secondary" fontSize={"20px"} lineHeight={1}>{subtitle}</Typography>
       </Box>
 
       <Box position="relative" sx={{

@@ -13,7 +13,7 @@ import image5 from '@/assets/projects-card-images/5.jpg';
 import image6 from '@/assets/projects-card-images/6.jpg';
 
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
-import { useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 
 interface ProjectsListProps {
   subtitle?: string;
@@ -25,7 +25,7 @@ const images = [
   {
     title: 'Sanit Engenharia',
     image: image1,
-    url: 'sait-engenharia'
+    url: 'sanit-engenharia'
   },
   {
     title: 'Zona de Criação',
@@ -56,10 +56,11 @@ const images = [
 
 
 
-export default function ProjectsList({ imgArray, emphasis }: ProjectsListProps) {
+export default function ProjectsList() {
   const theme = useTheme();
-  const [scrollLeftValue, setScrollLeftValue] = useState<number>();
-  const [scrollRightValue, setScrollRightValue] = useState<number>();
+  const pathname = usePathname();
+  const router = useRouter();
+  const path = pathname.replace('/', '');
 
 
 
@@ -101,8 +102,11 @@ export default function ProjectsList({ imgArray, emphasis }: ProjectsListProps) 
             id="slider"
           >
             {images.map((item, i) => {
+              if (item.url === path) {
+                return null;
+              }
               return (
-                <Box mr={2} key={i}>
+                <Box mr={2} key={i} sx={{ cursor: 'pointer' }} onClick={() => router.push(item.url)}>
                   <Box width={'270px'} height={'270px'}>
                     <Image quality={100} src={item.image} width={270} height={270} alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
                   </Box>

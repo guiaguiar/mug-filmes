@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 
 interface SectionBodyProps {
   children: React.ReactNode;
@@ -7,8 +7,10 @@ interface SectionBodyProps {
 
 const SectionBody: React.FC<SectionBodyProps> = ({
   children,
-  backgroundColor
+  backgroundColor,
 }) => {
+  const theme = useTheme();
+
   return (
     <Box sx={{
       position: 'relative',
@@ -16,7 +18,7 @@ const SectionBody: React.FC<SectionBodyProps> = ({
       alignItems: 'center',
       justifyContent: 'center',
       width: '100%',
-      backgroundColor: backgroundColor
+      backgroundColor: backgroundColor,
     }}>
       <Box
         sx={{

@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html,
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+#__next {
+  height: 100vh;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+  font-family: Manrope;
+  color: #f5f5f5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  /*Change text in autofill textbox*/
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1f2a45 inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
+*::selection {
+  background-color: #86ceff26;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #86ceff1f !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #86ceff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #86ceff66;
+}
+
+.grecaptcha-badge {
+  z-index: -1000000000000000;
+}

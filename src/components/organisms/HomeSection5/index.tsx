@@ -1,6 +1,10 @@
 import CustomButton from '@/components/atoms/CustomButton';
 import SectionBody from '@/components/atoms/SectionBody';
 import { Box, Grid, Typography, useTheme } from '@mui/material';
+import Image from 'next/image';
+import patternImage from '../../../assets/home/MUG_Pattern.svg';
+import grafismoRight from '../../../assets/home/grafismo-right.svg';
+
 
 export default function HomeSection5() {
   const theme = useTheme();
@@ -12,35 +16,32 @@ export default function HomeSection5() {
         backgroundColor: 'secondary.main',
         display: "flex",
         justifyContent: 'center',
+        overflow: 'hidden',
       }}
     >
+      <Image quality={100} src={patternImage} fill style={{ zIndex: 0, objectFit: 'cover', opacity: 0.7 }} alt="" />
+
       <SectionBody>
-        <Grid container pb="180px" pt={"82px"}>
-          <Box>
-            <Typography
-              fontWeight={300}
-              style={{
-                color: theme.palette.text.secondary,
-                fontSize: '50px',
-                paddingBottom: 40,
-                textTransform: 'uppercase',
-              }}>
-              NOSSOS PARCEIROS
-            </Typography>
-
-          </Box>
-
+        <Grid container pb="158px" pt={"177px"}>
+          <Grid item xs={12} sx={{
+            display: 'flex',
+            flexDirection: 'column',
+          }}>
+            <Box height={"112px"} width="3600px" position={'absolute'} zIndex={2000} display={{ xs: 'none', sm: 'initial' }} marginLeft={{ xs: '-3500px', sm: '-3700px', lg: '-3000px' }} mt={13}>
+              <Image quality={100} src={grafismoRight} fill style={{ zIndex: 30000, objectFit: 'cover', alignSelf: 'end' }} alt="" />
+            </Box>
+            <Typography textAlign={'start'} textTransform={'uppercase'} color={theme.palette.text.secondary} fontSize={70} fontWeight={300}>Tá faltando o que</Typography>
+            <Box height={"112px"} width="3600px" position={'absolute'} zIndex={2000} display={{ xs: 'none', sm: 'initial' }} marginLeft={{ xs: '-4000px', sm: '750px' }}>
+              <Image quality={100} src={grafismoRight} fill style={{ zIndex: 30000, objectFit: 'cover', alignSelf: 'end', rotate: '180deg' }} alt="" />
+            </Box>
+            <Typography textAlign={'end'} textTransform={'uppercase'} color={theme.palette.text.secondary} fontSize={70} fontWeight={300} pb="80px">pra começar?</Typography>
+          </Grid>
           <Grid item xs={12} sx={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center'
           }}>
-            <Typography color={theme.palette.text.secondary} fontSize={40} lineHeight={1}>Tá faltando o que pra</Typography>
-            <Typography color={theme.palette.text.secondary} fontSize={120} fontWeight={500} lineHeight={0.6}>começar?</Typography>
-          </Grid>
-
-          <Grid item display="flex" justifyContent="center" xs={12} pt={10}>
-            <CustomButton label='FAÇA SEU ORÇAMENTO' />
+            <CustomButton label='Faça seu Orçamento' height='48px' fontSize='23px' fontWeight={300} />
           </Grid>
 
         </Grid>

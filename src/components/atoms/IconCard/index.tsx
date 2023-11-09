@@ -8,7 +8,7 @@ interface IconCardProps {
 
 const IconCard: React.FC<IconCardProps> = ({ iconUrl, title, description }) => {
   return (
-    <Grid xs={12} md={6} lg={3} sx={{
+    <Grid item xs={12} md={6} lg={3} sx={{
       height: '160px',
       display: 'flex',
       flexDirection: 'column',

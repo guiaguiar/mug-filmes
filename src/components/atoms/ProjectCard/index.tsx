@@ -1,23 +1,22 @@
+"use client"
 import { Box, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 interface IconCardProps {
   title?: string;
   subtitle?: string;
-  key: number;
   url: string;
   imageName: any;
 }
 
-const ProjectCard: React.FC<IconCardProps> = ({ title, key, imageName, url, subtitle }) => {
+const ProjectCard: React.FC<IconCardProps> = ({ title, imageName, url, subtitle }) => {
   const [hover, setHover] = useState<boolean>(false);
   const router = useRouter();
 
   return (
     <Grid item
-      key={key}
       xs={12}
       sm={12}
       md={6}
@@ -57,8 +56,8 @@ const ProjectCard: React.FC<IconCardProps> = ({ title, key, imageName, url, subt
               justifyContent: 'center'
             }}
           >
-            <Typography fontSize={"30px"} fontWeight={700}>{title}</Typography>
-            <Typography fontSize={"20px"} fontWeight={300}>{subtitle}</Typography>
+            <Typography color="text.primary" fontSize={"30px"} fontWeight={700}>{title}</Typography>
+            <Typography color="text.primary" fontSize={"20px"} fontWeight={300}>{subtitle}</Typography>
           </Box>
           <Image src={imageName} fill alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
         </Box>

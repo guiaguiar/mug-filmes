@@ -24,6 +24,10 @@ let theme = createTheme({
       primary: '#F5F5F5',
       secondary: '#003DC4',
     },
+    background: {
+      default: '#FFF',
+      paper: '#FFF'
+    }
   },
   typography:{
     fontFamily: font

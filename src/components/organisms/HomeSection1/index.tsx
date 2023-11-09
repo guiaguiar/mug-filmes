@@ -1,6 +1,9 @@
 import SectionBody from '@/components/atoms/SectionBody';
 import { Box, Typography, useTheme } from '@mui/material';
 
+import CustomButton from '@/components/atoms/CustomButton';
+
+
 export default function HomeSection1() {
   const theme = useTheme();
   return (
@@ -10,32 +13,45 @@ export default function HomeSection1() {
         backgroundColor: 'secondary.main',
         display: "flex",
         justifyContent: 'center',
-        paddingTop: '50px'
+        height: '100vh',
       }}
     >
+      {/* <Image alt="alt" src={image4} fill style={{ objectFit: 'cover' }} /> */}
+      <Box sx={{ height: '100vh', backgroundColor: '#01020180', width: '100%', position: 'absolute', }}></Box>
       <SectionBody>
-        <Box display="flex" justifyContent="space-between">
-          <Typography
-            color={theme.palette.text.secondary}
-            style={{
-              fontSize: '30px',
-              fontWeight: 300,
-              textTransform: 'uppercase',
-            }}
-          >
-            SOLUÇÕES CRIATIVAS
-          </Typography>
-          <Typography
-            color={theme.palette.text.secondary}
-            style={{
-              fontSize: '30px',
-              fontWeight: 300,
-              textTransform: 'uppercase',
-            }}
-          >
-            EM PROJETOS AUDIOVISUAIS
-          </Typography>
-        </Box>
+        <Typography
+          color={theme.palette.text.primary}
+          style={{
+            fontSize: '45px',
+            fontWeight: 300,
+            textTransform: 'uppercase',
+          }}
+        >
+          Transforme projetos
+        </Typography>
+        <Typography
+          color={theme.palette.text.primary}
+          style={{
+            fontSize: '45px',
+            fontWeight: 300,
+            textTransform: 'uppercase',
+          }}
+        >
+          audiovisuais em histórias
+        </Typography>
+        <Typography
+          color={theme.palette.text.primary}
+          style={{
+            fontSize: '45px',
+            fontWeight: 300,
+            textTransform: 'uppercase',
+            paddingBottom: '34px'
+          }}
+        >
+          originais.
+        </Typography>
+
+        <CustomButton label='Faça seu Orçamento' height='48px' fontSize='23px' fontWeight={300} />
 
         <Typography fontSize={"24px"} color="text.primary" pb="35px"></Typography>
         {/* <Box position="relative" sx={{
@@ -51,20 +67,6 @@ export default function HomeSection1() {
             height: '100%'
           }} frameBorder="0" allowFullScreen></iframe>
         </Box> */}
-        <Box sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'flex-end',
-          paddingRight: '80px',
-          paddingTop: '48px',
-          paddingBottom: '80px'
-        }}>
-          <Box>
-            <Typography fontSize={"22px"} color="text.secondary" fontWeight={300}>Do papel para realidade,</Typography>
-            <Typography fontSize={"22px"} color="text.secondary" fontWeight={300}>transformando seu</Typography>
-            <Typography fontSize={"22px"} color="text.secondary" pb="35px" fontWeight={700}>plano em movimento.</Typography>
-          </Box>
-        </Box>
       </SectionBody>
     </Box>
 
