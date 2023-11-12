@@ -1,12 +1,28 @@
 import { Box, Grid, Typography } from '@mui/material';
+import Image from 'next/image';
+
+import curtaMetragem from '@/assets/home/curta-metragem.png';
+import documentario from '@/assets/home/documentario.png';
+import institucional from '@/assets/home/institucional.png';
+import webSerie from '@/assets/home/webserie.png';
+import { useMemo } from 'react';
+
+
 
 interface IconCardProps {
-  iconUrl?: string;
   title: string;
   description: string;
 }
 
-const IconCard: React.FC<IconCardProps> = ({ iconUrl, title, description }) => {
+const IconCard: React.FC<IconCardProps> = ({ title, description }) => {
+
+  const selectIcon = useMemo(() => {
+    if (title === "INSTITUCIONAL") return institucional;
+    if (title === "DOCUMENTÁRIO") return documentario;
+    if (title === "WEBSÉRIE") return webSerie;
+    return curtaMetragem;
+  }, [title]);
+
   return (
     <Grid item xs={12} md={6} lg={3} sx={{
       height: '160px',
@@ -21,7 +37,16 @@ const IconCard: React.FC<IconCardProps> = ({ iconUrl, title, description }) => {
         flexDirection: 'column',
         alignItems: 'center'
       }}>
-        {/* <Image url={iconUrl} alt="" style={{ objectFit: 'cover', objectPosition: 'top left' }} /> */}
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            pb: 2
+          }}
+        >
+          <Image quality={100} src={selectIcon} width={104} height={104} alt="" style={{ objectFit: 'cover', objectPosition: 'top left' }} />
+        </Box>
         <Typography color="text.secondary" fontSize={"25px"} textAlign={"center"}>{title}</Typography>
         <Typography color="text.secondary" fontSize={"16px"} textAlign={"center"}>{description}</Typography>
       </Box>

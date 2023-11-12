@@ -12,6 +12,7 @@ import image4 from '@/assets/projects-card-images/4.png';
 import image5 from '@/assets/projects-card-images/5.jpg';
 import image6 from '@/assets/projects-card-images/6.jpg';
 
+import BudgetButton from '@/components/atoms/BudgetButton';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 import { usePathname, useRouter } from 'next/navigation';
 
@@ -84,6 +85,9 @@ export default function ProjectsList() {
         }}
       >
         <Grid container>
+          <Grid item xs={12} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', pb: 8 }}>
+            <BudgetButton />
+          </Grid>
           <Typography
             pb={'89px'}
             color={theme.palette.text.secondary}

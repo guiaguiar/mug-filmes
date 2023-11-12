@@ -20,7 +20,7 @@ export default function Images4Section({ imgArray, emphasis }: Images4SectionPro
         sx={{
           display: "flex",
           justifyContent: 'center',
-          pb: '152px',
+          pb: 10,
         }}
       >
         <Grid container spacing={2}>

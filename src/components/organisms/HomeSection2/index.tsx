@@ -1,4 +1,3 @@
-import CustomButton from '@/components/atoms/CustomButton';
 import IconCard from '@/components/atoms/IconCard';
 import SectionBody from '@/components/atoms/SectionBody';
 import { Box, Grid, Typography, useTheme } from '@mui/material';
@@ -20,6 +19,9 @@ import logo6 from '@/assets/logos/6.png';
 import logo7 from '@/assets/logos/7.png';
 import logo8 from '@/assets/logos/8.png';
 import logo9 from '@/assets/logos/9.png';
+import BudgetButton from '@/components/atoms/BudgetButton';
+
+
 
 // import inst1 from '@/assets/gif-icons/movies/1.gif';
 // import inst1static from '@/assets/gif-icons/movies/1-static.png';
@@ -49,7 +51,7 @@ export default function HomeSection2() {
           <Image quality={100} src={grafismoRight} fill style={{ zIndex: 30000, objectFit: 'cover', alignSelf: 'end' }} alt="" />
         </Box>
         <SectionBody>
-          <Grid container pb={{ xs: '80px', md: "180px" }} zIndex={2000}>
+          <Grid container pb={{ xs: '80px', md: "140px" }} zIndex={2000}>
             <Grid item xs={12}
               sx={{
                 display: 'flex',
@@ -126,7 +128,7 @@ export default function HomeSection2() {
               </Box>
             </Box>
 
-            <Grid container item display="flex" justifyContent="center">
+            <Grid container item display="flex" justifyContent="center" pt={6} pb={12}>
               <IconCard title="INSTITUCIONAL" description="Transmita a essência do seu negócio e se destaque no mercado." />
               <IconCard title="DOCUMENTÁRIO" description="Conte histórias relevantes e inspire transformações com seu projeto." />
               <IconCard title="WEBSÉRIE" description="Mergulhe em um universo plural por meio de conteúdos originais." />
@@ -134,7 +136,7 @@ export default function HomeSection2() {
             </Grid>
 
             <Grid item display="flex" justifyContent="center" xs={12} zIndex={2000000000}>
-              <CustomButton label='Entre em contato' />
+              <BudgetButton />
             </Grid>
 
           </Grid>

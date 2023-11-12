@@ -1,17 +1,18 @@
-import { Box, Grid, Typography, useTheme } from '@mui/material';
+"use client"
+import { Box, Grid, Typography } from '@mui/material';
 
 import logo from '@/assets/brand/MUG_Branco.png';
 import SectionBody from '@/components/atoms/SectionBody';
 import Image from 'next/image';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function Footer() {
-  const theme = useTheme();
+  const router = useRouter();
 
   return (
     <Box sx={{
       backgroundColor: "primary.main",
-      minHeight: '410px'
+      minHeight: { xs: '520px', md: '380px' }
     }}>
       <SectionBody>
         <Grid container
@@ -23,48 +24,64 @@ export default function Footer() {
             pt: '86px'
           }}
         >
-          <Box sx={{
-            display: "flex",
-            flexDirection: "column",
+          <Grid item sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            width: '100%',
+            flexDirection: { xs: 'column', md: 'row' }
           }}>
-            <Typography color="text.primary" fontSize={"50px"} lineHeight={1} textTransform="uppercase">TRABALHE </Typography>
-            <Typography color="text.primary" fontSize={"50px"} lineHeight={1} textTransform="uppercase">COM A GENTE</Typography>
-          </Box>
-          <Box sx={{
-            display: "flex",
-            flexDirection: "column",
-          }}>
-            <Link
-              href=""
-            >
-              <Typography fontSize={20} color="text.primary">
-                Instagram
-              </Typography>
-            </Link>
-            <Link
-              href=""
-            >
-              <Typography fontSize={20} color="text.primary">
-                Vimeo
-              </Typography>
-            </Link>
-            <Link
-              href=""
-            >
-              <Typography fontSize={20} color="text.primary">
-                Linkedin
-              </Typography>
-            </Link>
-          </Box>
-          <Box sx={{
-            display: "flex",
-            flexDirection: "column",
-          }}>
-            <Typography color="text.primary" fontSize={"20px"}>(11) 91234 5678</Typography>
-            <Typography color="text.primary" fontSize={"20px"}>contato@mugfilmes.com.br</Typography>
-          </Box>
+            <Box sx={{
+              display: "flex",
+              flexDirection: "column",
+            }}>
+              <Typography color="text.primary" fontSize={"50px"} lineHeight={1} textTransform="uppercase">TRABALHE </Typography>
+              <Typography color="text.primary" fontSize={"50px"} lineHeight={1} textTransform="uppercase">COM A GENTE</Typography>
+            </Box>
+            <Box sx={{
+              display: "flex",
+              flexDirection: "column",
+            }}>
+              <Box
+                onClick={() => window.open('https://www.instagram.com/mugfilmes/')}
+                sx={{
+                  cursor: 'pointer'
+                }}
+              >
+                <Typography fontSize={20} color="text.primary">
+                  Instagram
+                </Typography>
+              </Box>
+              <Box
+                onClick={() => window.open('https://vimeo.com/mugfilmes')}
+                sx={{
+                  cursor: 'pointer'
+                }}
+              >
+                <Typography fontSize={20} color="text.primary">
+                  Vimeo
+                </Typography>
+              </Box>
+              <Box
+                onClick={() => window.open('https://www.linkedin.com/company/mug-filmes/about/')}
+                sx={{
+                  cursor: 'pointer'
+                }}
+              >
+                <Typography fontSize={20} color="text.primary">
+                  Linkedin
+                </Typography>
+              </Box>
+            </Box>
+            <Box sx={{
+              display: "flex",
+              flexDirection: "column",
+            }}>
+              <Typography color="text.primary" fontSize={"20px"}>(11) 98743 0299</Typography>
+              <Typography color="text.primary" fontSize={"20px"}>contato@mugfilmes.com</Typography>
+            </Box>
+          </Grid>
           <Grid item xs={12} pt="50px">
-            <Box position={'relative'} display="flex" alignItems={"center"} justifyContent={"center"} flexDirection={"column"}>
+            <Box position={'relative'} display="flex" alignItems={"center"} justifyContent={"center"} flexDirection={"column"} sx={{ cursor: 'pointer' }} onClick={() => router.push('/')}>
               <Image src={logo} height={74} width={73} alt="" />
               <Typography pt={2} color="text.primary" fontSize={"12px"} fontWeight={400}>Mug Filmes 2023</Typography>
             </Box>

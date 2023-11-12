@@ -174,6 +174,7 @@ export default function Menu({ isHome }: MenuProps) {
                 </Box>
               }
             </Box>
+            {/* do not change for BudgetButton */}
             <CustomButton label='FAÇA SEU ORÇAMENTO' />
           </Box>
         </Box>

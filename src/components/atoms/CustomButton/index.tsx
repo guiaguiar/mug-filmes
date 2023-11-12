@@ -1,22 +1,20 @@
 "use client"
 import { Button, useTheme } from "@mui/material";
-import { useState } from "react";
 
 interface ButtonProps {
   label?: string;
   height?: string;
   fontSize?: string;
   fontWeight?: number;
+  onClick?: () => void;
 }
 
-const CustomButton: React.FC<ButtonProps> = ({ label, height, fontSize, fontWeight }) => {
-  const [hover, setHover] = useState<boolean>(false);
+const CustomButton: React.FC<ButtonProps> = ({ label, height, fontSize, fontWeight, onClick }) => {
   const theme = useTheme();
 
   return (
     <Button
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
+      onClick={onClick}
       sx={{
         height: height || '36px',
         fontSize: fontSize || '16px',

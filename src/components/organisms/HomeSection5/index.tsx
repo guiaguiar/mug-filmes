@@ -27,14 +27,14 @@ export default function HomeSection5() {
             display: 'flex',
             flexDirection: 'column',
           }}>
-            <Box height={"112px"} width="3600px" position={'absolute'} zIndex={2000} display={{ xs: 'none', sm: 'initial' }} marginLeft={{ xs: '-3500px', sm: '-3700px', lg: '-3000px' }} mt={13}>
+            <Box height={"112px"} width="3600px" position={'absolute'} zIndex={2000} display={{ xs: 'none', sm: 'initial' }} marginLeft={{ xs: '-3500px', sm: '-3700px', lg: '-3000px' }} mt={18}>
               <Image quality={100} src={grafismoRight} fill style={{ zIndex: 30000, objectFit: 'cover', alignSelf: 'end' }} alt="" />
             </Box>
             <Typography textAlign={'start'} textTransform={'uppercase'} color={theme.palette.text.secondary} fontSize={70} fontWeight={300}>Tá faltando o que</Typography>
             <Box height={"112px"} width="3600px" position={'absolute'} zIndex={2000} display={{ xs: 'none', sm: 'initial' }} marginLeft={{ xs: '-4000px', sm: '750px' }}>
               <Image quality={100} src={grafismoRight} fill style={{ zIndex: 30000, objectFit: 'cover', alignSelf: 'end', rotate: '180deg' }} alt="" />
             </Box>
-            <Typography textAlign={'end'} textTransform={'uppercase'} color={theme.palette.text.secondary} fontSize={70} fontWeight={300} pb="80px">pra começar?</Typography>
+            <Typography textAlign={'end'} textTransform={'uppercase'} color={theme.palette.text.secondary} fontSize={70} fontWeight={300} pb="80px" pt={5}>pra começar?</Typography>
           </Grid>
           <Grid item xs={12} sx={{
             display: 'flex',

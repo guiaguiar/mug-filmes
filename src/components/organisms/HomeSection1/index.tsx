@@ -1,7 +1,7 @@
 import SectionBody from '@/components/atoms/SectionBody';
 import { Box, Typography, useTheme } from '@mui/material';
 
-import CustomButton from '@/components/atoms/CustomButton';
+import BudgetButton from '@/components/atoms/BudgetButton';
 
 
 export default function HomeSection1() {
@@ -51,7 +51,7 @@ export default function HomeSection1() {
           originais.
         </Typography>
 
-        <CustomButton label='Faça seu Orçamento' height='48px' fontSize='23px' fontWeight={300} />
+        <BudgetButton />
 
         <Typography fontSize={"24px"} color="text.primary" pb="35px"></Typography>
         {/* <Box position="relative" sx={{
