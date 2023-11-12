@@ -2,25 +2,19 @@
 
 import SectionBody from '@/components/atoms/SectionBody';
 import { Box, Grid, IconButton, Typography, useTheme } from '@mui/material';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 
 import image1 from '@/assets/projects-card-images/1.jpg';
 import image2 from '@/assets/projects-card-images/2.jpg';
 import image3 from '@/assets/projects-card-images/3.jpg';
-import image4 from '@/assets/projects-card-images/4.png';
+import image4 from '@/assets/projects-card-images/4.jpg';
 import image5 from '@/assets/projects-card-images/5.jpg';
 import image6 from '@/assets/projects-card-images/6.jpg';
 
 import BudgetButton from '@/components/atoms/BudgetButton';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 import { usePathname, useRouter } from 'next/navigation';
-
-interface ProjectsListProps {
-  subtitle?: string;
-  imgArray?: StaticImageData[];
-  emphasis?: boolean;
-}
 
 const images = [
   {

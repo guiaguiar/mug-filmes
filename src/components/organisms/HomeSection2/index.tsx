@@ -35,6 +35,7 @@ export default function HomeSection2() {
   return (
     <>
       <Box
+        id="about"
         sx={{
           position: 'relative',
           display: "flex",
@@ -145,10 +146,10 @@ export default function HomeSection2() {
       </Box>
       <Box>
         <SectionBody backgroundColor={theme.palette.primary.main}>
-          <Typography pt="82px" pb="82px" textTransform={'uppercase'} fontSize={{ xs: '42px', md: "50px" }} color="text.primary" fontWeight={300}>
+          <Typography pt={{xs: "40px", md: "82px"}} pb={{xs: "40px", md: "82px"}} textTransform={'uppercase'} fontSize={{ xs: '42px', md: "50px" }} color="text.primary" fontWeight={300}>
             Nossos Parceiros
           </Typography>
-          <Box pb="127px" display="flex" flexWrap="wrap" columnGap={4} rowGap={6} alignItems={"center"} justifyContent={"center"}>
+          <Box pb="127px" display={{ xs: 'none', md: "flex" }} flexWrap="wrap" columnGap={4} rowGap={6} alignItems={"center"} justifyContent={"center"}>
             <Image src={logo1} alt="" width={127} height={46} />
             <Image src={logo2} alt="" width={174} height={68} />
             <Image src={logo3} alt="" width={104} height={61} />
@@ -162,6 +163,21 @@ export default function HomeSection2() {
             <Image src={logo11} alt="" width={118} height={51} />
             <Image src={logo12} alt="" width={188} height={60} />
             <Image src={logo13} alt="" width={106} height={53} />
+          </Box>
+          <Box pb="80px" display={{ xs: 'flex', md: "none" }} flexWrap="wrap" columnGap={2} rowGap={2} alignItems={"center"} justifyContent={"center"}>
+            <Image src={logo1} alt="" width={127} height={46} style={{ scale: '0.6' }} />
+            <Image src={logo2} alt="" width={174} height={68} style={{ scale: '0.6' }} />
+            <Image src={logo3} alt="" width={104} height={61} style={{ scale: '0.6' }} />
+            <Image src={logo4} alt="" width={174} height={44} style={{ scale: '0.6' }} />
+            <Image src={logo5} alt="" width={169} height={59} style={{ scale: '0.6' }} />
+            <Image src={logo6} alt="" width={140} height={60} style={{ scale: '0.6' }} />
+            <Image src={logo7} alt="" width={131} height={31} style={{ scale: '0.6' }} />
+            <Image src={logo8} alt="" width={158} height={35} style={{ scale: '0.6' }} />
+            <Image src={logo9} alt="" width={96} height={50} style={{ scale: '0.6' }} />
+            <Image src={logo10} alt="" width={145} height={51} style={{ scale: '0.6' }} />
+            <Image src={logo11} alt="" width={118} height={51} style={{ scale: '0.6' }} />
+            <Image src={logo12} alt="" width={188} height={60} style={{ scale: '0.6' }} />
+            <Image src={logo13} alt="" width={106} height={53} style={{ scale: '0.6' }} />
           </Box>
         </SectionBody>
       </Box>

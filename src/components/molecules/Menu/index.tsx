@@ -96,7 +96,7 @@ export default function Menu({ isHome }: MenuProps) {
       left: 0,
       right: 0,
     }}>
-      <Box display={'flex'} position="relative" width={{ xs: "150px", md: "280px" }} minWidth={{ xs: "150px", md: "280px" }} alignItems={'center'} left={"44px"} onClick={() => router.push('/')} sx={{ cursor: isHome ? 'initial' : 'pointer', zIndex: 1 }}>
+      <Box display={'flex'} position="relative" width={{ xs: "150px", md: "230px" }} minWidth={{ xs: "150px", md: "230px" }} alignItems={'center'} left={"44px"} onClick={() => router.push('/')} sx={{ cursor: isHome ? 'initial' : 'pointer', zIndex: 1 }}>
         {isHome ?
           <Image src={logoWhite} fill style={{ objectFit: 'contain' }} alt="" quality={100} priority />
           :
@@ -117,18 +117,24 @@ export default function Menu({ isHome }: MenuProps) {
             columnGap: '108px',
             alignItems: 'center',
           }}>
-            {!!isHome &&
-              <Typography color={isHome ? "text.primary" : "text.secondary"}>
+            <Box
+              position="relative"
+              sx={{
+                cursor: 'pointer',
+                alignItems: 'center',
+                display: 'flex'
+              }}
+            >
+              <Typography color={isHome ? "text.primary" : "text.secondary"} pt="8px">
                 sobre
               </Typography>
-            }
-
+            </Box>
             <Box
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               position="relative"
               sx={{
-                cursor: 'default'
+                cursor: 'default',
               }}
             >
               <Typography

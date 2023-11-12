@@ -1,7 +1,7 @@
 import SectionBody from '@/components/atoms/SectionBody';
 import SectionBodyFullScreen from '@/components/atoms/SectionBodyFullScreen';
 import { ChevronLeft } from '@mui/icons-material';
-import { Box, Grid, IconButton, Link, Typography, useTheme } from '@mui/material';
+import { Box, Grid, IconButton, Typography, useTheme } from '@mui/material';
 import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
 import { ReactElement } from 'react';
@@ -38,7 +38,8 @@ export default function ProjectHomeSection({ descriptionComponent, title, subtit
             <ChevronLeft width={10} height={10} />
           </IconButton
           >
-          <Link
+          <Typography
+            color="text.secondary"
             sx={{
               fontWeight: 400,
               fontSize: '20px',
@@ -46,7 +47,7 @@ export default function ProjectHomeSection({ descriptionComponent, title, subtit
             }}
           >
             Voltar
-          </Link>
+          </Typography>
         </Box>
       </SectionBody>
       <Box height={400} width={'100%'}>
