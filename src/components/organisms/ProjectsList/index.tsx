@@ -70,7 +70,7 @@ export default function ProjectsList() {
   };
 
   return (
-    <SectionBody>
+    <SectionBody paddingRight={{ xs: '0px', md: '64px' }} paddingLeft={{ xs: '0px', md: '64px' }}>
       <Box
         sx={{
           display: "flex",
@@ -83,6 +83,8 @@ export default function ProjectsList() {
             <BudgetButton />
           </Grid>
           <Typography
+            pl={{ xs: '32px', md: '0px' }}
+            pr={{ xs: '32px', md: '0px' }}
             pb={'89px'}
             color={theme.palette.text.secondary}
             fontSize="50px"
@@ -93,9 +95,14 @@ export default function ProjectsList() {
           <Box
             sx={{
               display: "flex",
-              overflowX: "hidden",
+              overflowX: "scroll",
               overflowY: "hidden",
               scrollBehavior: 'smooth',
+              scrollbarWidth: '0px',
+              msOverflowStyle: 'none',
+              '::-webkit-scrollbar': {
+                display: 'none'
+              },
             }}
             id="slider"
           >
@@ -104,7 +111,7 @@ export default function ProjectsList() {
                 return null;
               }
               return (
-                <Box mr={2} key={i} sx={{ cursor: 'pointer' }} onClick={() => router.push(item.url)}>
+                <Box mr={2} key={i} sx={{ cursor: 'pointer' }} onClick={() => router.push(item.url)} marginLeft={i === 0 ? '20px' : '0px'}>
                   <Box width={'270px'} height={'270px'}>
                     <Image quality={100} src={item.image} width={270} height={270} alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
                   </Box>
@@ -120,11 +127,11 @@ export default function ProjectsList() {
           </Box>
 
           <Box className="title-btns">
-            <Box className="btns">
-              <IconButton title="scroll left" onClick={slideLeft} sx={{ position: 'absolute', left: 0, top: '270px', svg: { fill: theme.palette.primary.main } }}>
+            <Box className="btns" display={{ xs: 'none', md: 'initial' }}>
+              <IconButton title="scroll left" onClick={slideLeft} sx={{ position: 'absolute', left: 0, top: '390px', svg: { fill: theme.palette.primary.main } }}>
                 <ChevronLeft width={40} height={40} />
               </IconButton>
-              <IconButton title="scroll right" onClick={slideRight} sx={{ position: 'absolute', right: 0, top: '270px', svg: { fill: theme.palette.primary.main } }}>
+              <IconButton title="scroll right" onClick={slideRight} sx={{ position: 'absolute', right: 0, top: '390px', svg: { fill: theme.palette.primary.main } }}>
                 <ChevronRight width={40} height={40} />
               </IconButton>
             </Box>

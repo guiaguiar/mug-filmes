@@ -3,11 +3,15 @@ import { Box, useTheme } from '@mui/material';
 interface SectionBodyProps {
   children: React.ReactNode;
   backgroundColor?: string;
+  paddingRight?: any;
+  paddingLeft?: any;
 }
 
 const SectionBody: React.FC<SectionBodyProps> = ({
   children,
   backgroundColor,
+  paddingRight,
+  paddingLeft
 }) => {
   const theme = useTheme();
 
@@ -25,8 +29,8 @@ const SectionBody: React.FC<SectionBodyProps> = ({
           position: 'relative',
           maxWidth: '1400px',
           width: '100%',
-          paddingRight: {xs: '32px', md: '64px'},
-          paddingLeft: {xs: '32px', md: '64px'}
+          paddingRight: paddingRight || { xs: '32px', md: '64px' },
+          paddingLeft: paddingLeft || { xs: '32px', md: '64px' }
 
         }}
       >
