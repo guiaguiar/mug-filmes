@@ -28,7 +28,7 @@ export default function Images4Section({ imgArray, emphasis }: Images4SectionPro
             if (emphasis && i === 0) {
               return (
                 <Grid item xs={12} key={i}>
-                  <Box sx={{ position: 'relative', width: '100%', height: '643px' }}>
+                  <Box sx={{ position: 'relative', width: '100%', height: {xs: '310px', md: '643px'} }}>
                     <Image src={item} quality={50} fill alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
                   </Box>
                 </Grid>
