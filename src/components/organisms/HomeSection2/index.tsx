@@ -130,10 +130,10 @@ export default function HomeSection2() {
             </Box>
 
             <Grid container item display="flex" justifyContent="center" pt={6} pb={12}>
-              <IconCard title="INSTITUCIONAL" description="Transmita a essência do seu negócio e se destaque no mercado." />
-              <IconCard title="DOCUMENTÁRIO" description="Conte histórias relevantes e inspire transformações com seu projeto." />
-              <IconCard title="WEBSÉRIE" description="Mergulhe em um universo plural por meio de conteúdos originais." />
-              <IconCard title="CURTA-METRAGEM" description="Explore perspectivas e emoções em narrativas autorais." />
+              <IconCard url='/sanit-engenharia' title="INSTITUCIONAL" description="Transmita a essência do seu negócio e se destaque no mercado." />
+              <IconCard url='/vila-das-artes' title="DOCUMENTÁRIO" description="Conte histórias relevantes e inspire transformações com seu projeto." />
+              <IconCard url='/zona-de-criacao' title="WEBSÉRIE" description="Mergulhe em um universo plural por meio de conteúdos originais." />
+              <IconCard url='/enquanto-acaba' title="CURTA-METRAGEM" description="Explore perspectivas e emoções em narrativas autorais." />
             </Grid>
 
             <Grid item display="flex" justifyContent="center" xs={12} zIndex={2000000000}>
