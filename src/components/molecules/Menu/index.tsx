@@ -78,6 +78,12 @@ export default function Menu({ isHome }: MenuProps) {
           fontWeight={400}
           fontSize={"14px"}
           color={theme.palette.secondary.main}
+          sx={{
+            ':hover': {
+              fontWeight: 700,
+              transition: '0.2s ease-out',
+            }
+          }}
         >
           {title}
         </Typography>
@@ -122,7 +128,14 @@ export default function Menu({ isHome }: MenuProps) {
               sx={{
                 cursor: 'pointer',
                 alignItems: 'center',
-                display: 'flex'
+                display: 'flex',
+              }}
+              onClick={() => {
+                if(isHome){
+                  document?.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
+                }else{
+                  router.push('/#about')
+                }
               }}
             >
               <Typography color={isHome ? "text.primary" : "text.secondary"} pt="8px">
