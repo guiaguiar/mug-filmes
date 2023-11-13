@@ -2,6 +2,7 @@ import SectionBody from '@/components/atoms/SectionBody';
 import { Box, Typography, useTheme } from '@mui/material';
 
 import BudgetButton from '@/components/atoms/BudgetButton';
+// import image from '@/../public/'
 
 
 export default function HomeSection1() {
@@ -17,6 +18,17 @@ export default function HomeSection1() {
       }}
     >
       {/* <Image alt="alt" src={image4} fill style={{ objectFit: 'cover' }} /> */}
+      <Box
+        sx={{
+          position: 'absolute',
+          width: '100%',
+          backgroundColor: 'red',
+          height: '100%',
+          overflow: 'hidden',
+        }}
+      >
+        <video loop playsInline muted autoPlay src="home-gif.mp4" style={{ objectFit: 'cover', height: '100vh', width: '100%'}} />
+      </Box>
       <Box sx={{ height: '100vh', backgroundColor: '#01020180', width: '100%', position: 'absolute', }}></Box>
       <SectionBody>
         <Typography
