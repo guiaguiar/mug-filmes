@@ -1,5 +1,5 @@
 import SectionBody from '@/components/atoms/SectionBody';
-import { Box, Grid, useTheme } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import Image, { StaticImageData } from 'next/image';
 
 
@@ -10,10 +10,6 @@ interface Images4SectionProps {
 }
 
 export default function Images4Section({ imgArray, emphasis }: Images4SectionProps) {
-  const theme = useTheme();
-
-  console.log(imgArray);
-
   return (
     <SectionBody>
       <Box

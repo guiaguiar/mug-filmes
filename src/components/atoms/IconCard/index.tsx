@@ -13,7 +13,7 @@ import documentario from '@/assets/home/documentario.png';
 import webSerie from '@/assets/home/webserie.png';
 
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 
 
@@ -23,19 +23,31 @@ interface IconCardProps {
   url: string;
 }
 
-function selectImage(title: string, isOpening: boolean) {
-  if (title === "INSTITUCIONAL"){
-    if(isOpening) return instOpening;
-    else return instClosing;
-  }
-  if (title === "DOCUMENTÁRIO") return documentario;
-  if (title === "WEBSÉRIE") return webSerie;
-  return curtaMetragem;
-}
-
 const IconCard: React.FC<IconCardProps> = ({ title, description, url }) => {
+  const images = {
+    'INSTITUCIONAL': {
+      opening: instOpening,
+      closing: instClosing
+    }
+  }
   const [currentImage, setCurrentImage] = useState(selectImage(title, false));
   const router = useRouter();
+
+  
+
+  React.useEffect(() => {
+    console.log('loading first time');
+  })
+
+  function selectImage(title: string, isOpening: boolean) {
+    if (title === "INSTITUCIONAL") {
+      if (isOpening) return images[`INSTITUCIONAL`].opening;
+      else return images[`INSTITUCIONAL`].closing;
+    }
+    if (title === "DOCUMENTÁRIO") return documentario;
+    if (title === "WEBSÉRIE") return webSerie;
+    return curtaMetragem;
+  }
 
   return (
     <Grid item xs={12} md={6} lg={3} sx={{
@@ -43,19 +55,23 @@ const IconCard: React.FC<IconCardProps> = ({ title, description, url }) => {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
+      position: 'relative',
     }}>
       <Box sx={{
-        position: 'relative',
+        position: 'absolute',
         maxWidth: '300px',
+        height: '211px',
+        width: '100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        zIndex: 22,
       }}
         id={title}
+        onClick={() => router.push(url)}
         onMouseEnter={() => setCurrentImage(selectImage(title, true))}
         onMouseLeave={() => setCurrentImage(selectImage(title, false))}
-        onClick={() => router.push(url)}
       >
         <Box
           sx={{
@@ -64,16 +80,11 @@ const IconCard: React.FC<IconCardProps> = ({ title, description, url }) => {
             justifyContent: 'center',
             width: '110px',
             height: '110px',
-            pb: 2
+            pb: 2,
+            zIndex: 10
           }}
         >
-          {/* <Image quality={100} src={inst4} width={104} height={104} alt="" style={{ objectFit: 'cover', objectPosition: 'top left', display: hover ? 'none' : 'initial' }} /> */}
-          <Image quality={100} src={currentImage} width={104} height={104} alt="" style={{ objectFit: 'cover', objectPosition: 'top left' }} />
-          {/* <Image quality={100} src={selectIcon} width={104} height={104} alt="" style={{ objectFit: 'cover', objectPosition: 'top left' }} /> */}
-          {/* <Image quality={100} src={selectIcon} width={104} height={104} alt="" style={{ objectFit: 'cover', objectPosition: 'top left' }} /> */}
-          {/* <Image quality={100} src={selectIcon} width={104} height={104} alt="" style={{ objectFit: 'cover', objectPosition: 'top left' }} /> */}
-
-          {/* <Image quality={100} src={selectIcon} width={104} height={104} alt="" style={{ objectFit: 'cover', objectPosition: 'top left' }} /> */}
+          <Image quality={100} src={currentImage} width={104} height={104} alt="" />
         </Box>
         <Typography color="text.secondary" fontSize={"25px"} textAlign={"center"}>{title}</Typography>
         <Typography pb={2} color="text.secondary" fontSize={"16px"} textAlign={"center"}>{description}</Typography>

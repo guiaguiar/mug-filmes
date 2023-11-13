@@ -36,7 +36,7 @@ export default function Home() {
       <ProjectHomeSection
         img={imageBanner}
         imgPosition="50% 50%"
-        title='SANIT ENGENHARIA'
+        title='UNAIDS BRASIL'
         subtitle='Institucional'
         year="2022"
         descriptionComponent={

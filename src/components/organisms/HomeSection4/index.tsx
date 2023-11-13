@@ -35,7 +35,6 @@ export default function HomeSection4() {
 
   React.useEffect(() => {
     setTimeout(() => {
-      console.log(count);
       if (count === 2) {
         setCount(0);
       } else {

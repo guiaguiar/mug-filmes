@@ -16,7 +16,8 @@ const ProjectCard: React.FC<IconCardProps> = ({ title, imageName, url, subtitle 
   const router = useRouter();
 
   return (
-    <Grid item
+    <Grid
+      item
       xs={12}
       sm={12}
       md={6}
@@ -27,7 +28,8 @@ const ProjectCard: React.FC<IconCardProps> = ({ title, imageName, url, subtitle 
         onClick={() => router.push(url)}
         sx={{
           position: 'relative',
-          minHeight: '405px',
+          minHeight: {xs: '300px', sm: '400px', md: '300px', lg: '330px', xl: '430px'},
+          height: '100%',
           overflow: 'hidden',
           cursor: 'pointer'
         }}>
