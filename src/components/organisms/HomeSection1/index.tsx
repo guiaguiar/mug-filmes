@@ -22,7 +22,6 @@ export default function HomeSection1() {
         sx={{
           position: 'absolute',
           width: '100%',
-          backgroundColor: 'red',
           height: '100%',
           overflow: 'hidden',
         }}
