@@ -43,7 +43,7 @@ const images = [
     url: 'unaids'
   },
   {
-    title: 'Enquanto acaba',
+    title: 'Enquanto Acaba',
     image: image6,
     url: 'enquanto-acaba'
   }

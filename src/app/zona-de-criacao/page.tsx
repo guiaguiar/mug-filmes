@@ -40,7 +40,7 @@ export default function ProjectZonaDeCriacao() {
           </Typography>
         }
       />
-      <BigVideoSection link='https://player.vimeo.com/video/819689888' title="Uma trama plural que explora os limites do território da linguagem." />
+      <BigVideoSection link='https://player.vimeo.com/video/819689888' title="Uma trama plural que explora os" title2='limites do território da linguagem.' />
       <ProjectDescription
         title1='O que'
         title2='Produzimos'

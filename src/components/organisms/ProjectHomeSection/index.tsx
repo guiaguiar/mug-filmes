@@ -33,21 +33,23 @@ export default function ProjectHomeSection({ descriptionComponent, title, subtit
             size='small' sx={{
               svg: {
                 color: theme.palette.text.secondary
-              }
+              },
+              borderRadius: '12px'
             }}>
-            <ChevronLeft width={10} height={10} />
-          </IconButton
-          >
-          <Typography
-            color="text.secondary"
-            sx={{
-              fontWeight: 400,
-              fontSize: '20px',
-              textDecoration: 'none'
-            }}
-          >
-            Voltar
-          </Typography>
+              <ChevronLeft width={12} height={12} />
+            <Typography
+              color="text.secondary"
+              pr={1}
+              pl={1}
+              sx={{
+                fontWeight: 400,
+                fontSize: '20px',
+                textDecoration: 'none'
+              }}
+            >
+              Voltar
+            </Typography>
+          </IconButton>
         </Box>
       </SectionBody>
       <Box height={400} width={'100%'}>
@@ -105,7 +107,7 @@ export default function ProjectHomeSection({ descriptionComponent, title, subtit
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={6} sx={{ textAlign: 'justify' }}>
               {descriptionComponent}
             </Grid>
           </Grid>

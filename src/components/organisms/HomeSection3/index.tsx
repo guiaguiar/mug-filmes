@@ -2,11 +2,11 @@ import ProjectCard from '@/components/atoms/ProjectCard';
 import { Box, Grid, useTheme } from '@mui/material';
 
 import image1 from '@/assets/projects-card-images/1.jpg';
-import image2 from '@/assets/projects-card-images/2.jpg';
 import image3 from '@/assets/projects-card-images/3.jpg';
 import image4 from '@/assets/projects-card-images/4.jpg';
 import image5 from '@/assets/projects-card-images/5.jpg';
 import image6 from '@/assets/projects-card-images/6.jpg';
+import image2 from '@/assets/side-projects/zona-de-criacao/1.jpg';
 import SectionBodyFullScreen from '@/components/atoms/SectionBodyFullScreen';
 
 
@@ -39,7 +39,7 @@ const images = [
     url: 'unaids'
   },
   {
-    title: 'Enquanto acaba',
+    title: 'Enquanto Acaba',
     image: image6,
     url: 'enquanto-acaba'
   }

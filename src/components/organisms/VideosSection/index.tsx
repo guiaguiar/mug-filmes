@@ -17,7 +17,7 @@ export default function VideosSection({ videoCodeArray, emphasis }: VideosSectio
         sx={{
           display: "flex",
           justifyContent: 'center',
-          pb: '152px',
+          pb: '80px',
         }}
       >
         <Grid container spacing={2}>

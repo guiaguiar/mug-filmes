@@ -46,7 +46,7 @@ export default function RenatoRoseno() {
           </Typography>
         }
       />
-      <BigVideoSection link='https://player.vimeo.com/video/819603942' title="“Se muito vale o que já foi feito, vale mais ainda o que será.”" subtitle='Guimarães Rosa' />
+      <BigVideoSection link='https://player.vimeo.com/video/819603942' title="“Se muito vale o que já foi feito," title2='vale mais ainda o que será.”' subtitle='Guimarães Rosa' />
       <ProjectDescription
         title1='O que'
         title2='Produzimos'
@@ -59,7 +59,9 @@ export default function RenatoRoseno() {
           </Typography>}
       />
 
-      <VideosSection emphasis videoCodeArray={[`/819606308`, `/819603942`, `/819603780`, `/819606584`, `/819602802`]} />
+      <VideosSection emphasis videoCodeArray={[`/819606308`, `/819603780`, `/819606584`, `/819602802`, `/819603942`,]} />
+
+      <Box pb={4} />
 
       <ProjectDescription
         title1='Loc-Off'

@@ -15,7 +15,7 @@ export default function BigVideoSection({ title, title2, link, subtitle }: BigVi
     <SectionBody>
       <Box sx={{ pb: {xs: '20px', md: '80px'} }}>
         <Typography textAlign="center" color="text.secondary" fontSize={{ xs: '42px', md: "50px" }} lineHeight={1} pb={3}>{title}</Typography>
-        <Typography textAlign="center" color="text.secondary" fontSize={{ xs: '42px', md: "50px" }} lineHeight={1}>{title2}</Typography>
+        <Typography textAlign="center" color="text.secondary" fontSize={{ xs: '42px', md: "50px" }} lineHeight={1} pb={3}>{title2}</Typography>
         <Typography textAlign="center" color="text.secondary" fontSize={"20px"} lineHeight={1}>{subtitle}</Typography>
       </Box>
 

@@ -39,7 +39,7 @@ const projects = [
     url: 'unaids'
   },
   {
-    title: 'Enquanto acaba',
+    title: 'Enquanto Acaba',
     url: 'enquanto-acaba'
   }
 ]
