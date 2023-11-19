@@ -56,6 +56,7 @@ export default function Home() {
           <Typography
             color={theme.palette.text.secondary}
             fontSize="18px"
+            textAlign='justify'
           >
            Consiste em um <span>projeto de curta-metragem de ficção, com duração de 30 minutos</span>, filmado em Fortaleza, com equipe local, roteiro e direção assinada por Lua Alencar, realizador e sócio-proprietário da Mug Filmes. A obra tem como mote suscitar reflexões e metáforas sobre efemeridade e esquecimento, do ponto de vista da vida solitária da personagem Anna, que trabalha em uma firma de advocacia, escrevendo obituários e inventariando memórias de pessoas mortas.
           </Typography>}

@@ -56,6 +56,7 @@ export default function Home() {
           <Typography
             color={theme.palette.text.secondary}
             fontSize="18px"
+            textAlign='justify'
           >
             Neste projeto, realizado em parceria com UNAIDS Brasil, ficamos responsável pela <span>captação e edição do material do Edital Fast Track Cities</span>. A partir de um roteiro idealizado pela própria organização, fizemos uma imersão na sede da Rede Nacional de Pessoas Vivendo com HIV (RNP) no Ceará. Na ocasião, captamos depoimentos e relatos que ajudam a contribuir com o combate ao preconceito, conscientizando a população sobre a importância da prevenção e orientando pessoas que possuem HIV na adesão ao tratamento.
           </Typography>}
@@ -72,6 +73,7 @@ export default function Home() {
               pb={2}
               color={theme.palette.text.secondary}
               fontSize="18px"
+              textAlign='justify'
             >
               “É uma luta de mais de 25 anos, que vem ajudando muitas pessoas, na qual eu sou também um dos contemplados com essa política da Rede Nacional de Pessoas Vivendo com HIV (RNP).”
             </Typography>

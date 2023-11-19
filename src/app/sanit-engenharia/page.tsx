@@ -56,6 +56,7 @@ export default function Home() {
           <Typography
             color={theme.palette.text.secondary}
             fontSize="18px"
+            textAlign='justify'
           >
             O filme institucional surge a partir do processo de documentação da obra de recuperação do Interceptor Oeste em Fortaleza. O objetivo principal desse trabalho é <span>evidenciar a inovação das empresas envolvidas no projeto, reforçando os aspectos ambientais, tecnológicos e sociais que permeiam essa empreitada de longo prazo</span>. Durante a produção, registramos as principais etapas de recuperação, além de conduzir entrevistas com os técnicos responsáveis e moradores locais. O filme oferece uma visão abrangente dessa importante iniciativa, destacando sua relevância e os impactos positivos para a comunidade e o meio ambiente.
           </Typography>}
@@ -141,6 +142,7 @@ export default function Home() {
               pb={2}
               color={theme.palette.text.secondary}
               fontSize="18px"
+              textAlign='justify'
             >
               “Buscamos, por meio de nossas obras, promover maior qualidade nas redes de água e esgoto do país, com ética, responsabilidade social e prazer em atender.”
             </Typography>

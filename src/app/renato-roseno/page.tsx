@@ -46,7 +46,7 @@ export default function RenatoRoseno() {
           </Typography>
         }
       />
-      <BigVideoSection link='https://player.vimeo.com/video/819603942' title="“Se muito vale o que já foi feito," title2='vale mais ainda o que será.”' subtitle='Guimarães Rosa' />
+      <BigVideoSection link='https://player.vimeo.com/video/819606308' title="“Se muito vale o que já foi feito," title2='vale mais ainda o que será.”' subtitle='Guimarães Rosa' />
       <ProjectDescription
         title1='O que'
         title2='Produzimos'
@@ -54,12 +54,13 @@ export default function RenatoRoseno() {
           <Typography
             color={theme.palette.text.secondary}
             fontSize="18px"
+            textAlign='justify'
           >
             Nesta campanha, em conjunto com a assessoria de comunicação do parlamentar, <span>realizamos o planejamento do conteúdo audiovisual de campanha para redes sociais e TV</span>. As peças realizadas eram desenvolvidas por uma equipe interdisciplinar, desde roteiro, direção de arte, direção de fotografia, motion graphics e pós-produção de áudio e colorização. Todo conteúdo foi desenvolvido a partir de temáticas sociais que fazem parte das diretrizes de atuação do candidato, que foi reeleito ao terceiro mandato no Estado do Ceará.
           </Typography>}
       />
 
-      <VideosSection emphasis videoCodeArray={[`/819606308`, `/819603780`, `/819606584`, `/819602802`, `/819603942`,]} />
+      <VideosSection videoCodeArray={[`/819603780`, `/819606584`, `/819602802`, `/819603942`,]} />
 
       <Box pb={4} />
 

@@ -1,12 +1,12 @@
-import { Box, Link, Typography, useTheme } from '@mui/material';
-import Image from 'next/image';
-
 import logo from '@/assets/brand/MUG_Logo_Azul.png';
 import logoWhite from '@/assets/brand/MUG_Logo_Branco.png';
 import CustomButton from '@/components/atoms/CustomButton';
 import SectionBody from '@/components/atoms/SectionBody';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Box, Drawer, IconButton, Link, Typography, useTheme } from '@mui/material';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 interface MenuProps {
   isHome?: boolean;
@@ -15,6 +15,7 @@ interface MenuProps {
 interface ListItemProps {
   title: string;
   url: string;
+  pb?: string;
 }
 
 const projects = [
@@ -44,10 +45,14 @@ const projects = [
   }
 ]
 
+type Anchor = 'top' | 'left' | 'bottom' | 'right';
+
 export default function Menu({ isHome }: MenuProps) {
   const router = useRouter();
   const theme = useTheme();
   const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const [state, setState] = React.useState(false);
 
   const handleMouseEnter = () => {
     setDropdownVisible(true);
@@ -57,7 +62,22 @@ export default function Menu({ isHome }: MenuProps) {
     setDropdownVisible(false);
   };
 
-  const ListItem = ({ title, url }: ListItemProps) => {
+
+  const toggleDrawer =
+    (anchor: Anchor, open: boolean) =>
+      (event: React.KeyboardEvent | React.MouseEvent) => {
+        if (
+          event.type === 'keydown' &&
+          ((event as React.KeyboardEvent).key === 'Tab' ||
+            (event as React.KeyboardEvent).key === 'Shift')
+        ) {
+          return;
+        }
+
+        setState(true);
+      };
+
+  const ListItem = ({ title, url, pb }: ListItemProps) => {
     return (
       <Link
         onClick={() => {
@@ -69,14 +89,13 @@ export default function Menu({ isHome }: MenuProps) {
           width: '156px',
           cursor: 'pointer',
           textDecoration: 'none',
-          paddingBottom: '12px',
-          marginTop: title === 'SANIT Engenharia' ? '8px' : 0,
+          marginTop: title === 'SANIT Engenharia' ? '0px' : 0,
         }}
-        pl="19px"
       >
         <Typography
           fontWeight={400}
           fontSize={"14px"}
+          pb={pb || '19px'}
           color={theme.palette.secondary.main}
           sx={{
             ':hover': {
@@ -90,6 +109,41 @@ export default function Menu({ isHome }: MenuProps) {
       </Link>
     )
   }
+
+  const list = (anchor: Anchor) => (
+    <Box
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      role="presentation"
+      onClick={() => setState(false)}
+      onKeyDown={() => setState(false)}
+    >
+      {/* <List>
+        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List> */}
+    </Box>
+  );
 
   return (
     <Box sx={{
@@ -131,9 +185,9 @@ export default function Menu({ isHome }: MenuProps) {
                 display: 'flex',
               }}
               onClick={() => {
-                if(isHome){
+                if (isHome) {
                   document?.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
-                }else{
+                } else {
                   router.push('/#about')
                 }
               }}
@@ -185,10 +239,12 @@ export default function Menu({ isHome }: MenuProps) {
                     width: '156px',
                     display: 'flex',
                     flexDirection: 'column',
+                    pl: '19px',
+                    pt: '8px'
                   }}
                 >
                   {projects.map(item => {
-                    return <ListItem key={item.title} title={item.title} url={item.url} />
+                    return <ListItem pb="8px" key={item.title} title={item.title} url={item.url} />
                   })}
                 </Box>
               }
@@ -196,8 +252,72 @@ export default function Menu({ isHome }: MenuProps) {
             {/* do not change for BudgetButton */}
             <CustomButton label='FAÇA SEU ORÇAMENTO' />
           </Box>
+          <Box display={{ xs: 'flex', lg: 'none' }} sx={{
+            alignItems: 'center',
+
+          }}>
+            <IconButton
+              sx={{
+                svg: {
+                  fill: 'white'
+                }
+              }}
+              onClick={() => setState(true)}
+              size='large'
+            >
+              <MenuIcon />
+            </IconButton>
+          </Box>
         </Box>
       </SectionBody >
+      <div>
+        <React.Fragment key={1}>
+          <Drawer
+            anchor={'right'}
+            open={state}
+            onClose={() => setState(false)}
+            sx={{
+              zIndex: 30000,
+            }}
+          >
+            <Box sx={{
+              width: '230px',
+              backgroundColor: theme.palette.primary.main,
+              height: '100%',
+              paddingLeft: '32px'
+            }}>
+              <Box
+                position="relative"
+                sx={{
+                  cursor: 'pointer',
+                  alignItems: 'center',
+                  display: 'flex',
+                  paddingTop: '16px'
+                }}
+                onClick={() => {
+                  if (isHome) {
+                    document?.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
+                  } else {
+                    router.push('/#about')
+                  }
+                }}
+              >
+                <Typography fontWeight={700} color={"text.primary"} pt="8px" pb="16px">
+                  Sobre
+                </Typography>
+              </Box>
+              <Typography pb="8px" fontWeight={700} color={"text.primary"} pt="8px">
+                Projetos
+              </Typography>
+              <Box pl="16px">
+                {projects.map(item => {
+                  return <ListItem pb="8px" key={item.title} title={item.title} url={item.url} />
+                })}
+              </Box>
+            </Box>
+          </Drawer>
+        </React.Fragment>
+      </div>
     </Box >
   )
 }

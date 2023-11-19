@@ -56,6 +56,7 @@ export default function Home() {
           <Typography
             color={theme.palette.text.secondary}
             fontSize="18px"
+            textAlign='justify'
           >
             Em parceria com o Instituto Cultural Iracema, desenvolvemos um projeto para celebrar os <span>15 anos de existência do Complexo Cultural Vila das Artes</span>. O objetivo principal foi destacar a trajetória desse espaço, abordando suas diversas áreas de atuação, como as escolas de circo, dança, audiovisual e teatro. Como parte desse projeto, produzimos teasers que refletem as diretrizes de cada escola, bem como um vídeo institucional que apresenta a história e os desafios enfrentados por esse espaço cultural gerido pela Prefeitura de Fortaleza.
           </Typography>}
@@ -134,6 +135,7 @@ export default function Home() {
               pb={2}
               color={theme.palette.text.secondary}
               fontSize="18px"
+              textAlign='justify'
             >
               “Independente da vontade do poder público, a história da Vila das Artes é marcada como um lugar de encontro. Nesse sentido, ela passa a ser ocupada e esse processo de ocupação é a própria trajetória do Complexo Cultural Vila das Artes.”
             </Typography>
