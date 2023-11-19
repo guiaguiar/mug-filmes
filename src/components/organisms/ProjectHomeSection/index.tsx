@@ -79,7 +79,7 @@ export default function ProjectHomeSection({ descriptionComponent, title, subtit
               <Typography
                 color={theme.palette.text.secondary}
                 sx={{
-                  fontSize: { xs: '42px', md: '50px' },
+                  fontSize: { xs: '38px', md: '50px' },
                   fontWeight: 400,
                   textTransform: 'uppercase',
                 }}

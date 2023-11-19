@@ -40,7 +40,7 @@ export default function RenatoRoseno() {
         descriptionComponent={
           <Typography
             color={theme.palette.text.secondary}
-            fontSize="18px"
+            fontSize={{ xs: '16', md: "18px" }}
           >
             Por meio de uma campanha plural e marcante em nossa trajetória, reelegemos o <span>Deputado Estadual Renato Roseno</span> no Estado do Ceará. Os filmes abordam questões como terra e território, meio ambiente, diversidade cultural e políticas públicas para minorias sociais. Para isto, produzimos filmes com diversas linguagens e formatos como: documentário, vídeo publicitário e animação.
           </Typography>
@@ -53,7 +53,7 @@ export default function RenatoRoseno() {
         descriptionComponent={
           <Typography
             color={theme.palette.text.secondary}
-            fontSize="18px"
+            fontSize={{ xs: '16', md: "18px" }}
             textAlign='justify'
           >
             Nesta campanha, em conjunto com a assessoria de comunicação do parlamentar, <span>realizamos o planejamento do conteúdo audiovisual de campanha para redes sociais e TV</span>. As peças realizadas eram desenvolvidas por uma equipe interdisciplinar, desde roteiro, direção de arte, direção de fotografia, motion graphics e pós-produção de áudio e colorização. Todo conteúdo foi desenvolvido a partir de temáticas sociais que fazem parte das diretrizes de atuação do candidato, que foi reeleito ao terceiro mandato no Estado do Ceará.
@@ -71,62 +71,62 @@ export default function RenatoRoseno() {
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               Somos uma gente de coragem, com força pra lutar.
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               E Renato tem sido parceiro presente nessa resistência
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               Fazemos uma política que se preocupa com o meio ambiente,
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               Que denuncia a desigualdade e o descaso com os mais pobres.
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               Nossa atuação coletiva tem gerado conquistas
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               que fazem a diferença na vida das pessoas.
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               Renato está nas mais diversas lutas, em tudo quanto é município.
             </Typography>
             <Typography
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
               pb={2}
             >
               Onde tem luta, tem Renato.
             </Typography>
             <Typography
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               O que não nos falta é <span>coragem pra lutar</span>.
             </Typography>

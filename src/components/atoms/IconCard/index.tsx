@@ -86,8 +86,8 @@ const IconCard: React.FC<IconCardProps> = ({ title, description, url }) => {
         >
           <Image quality={100} src={currentImage} width={104} height={104} alt="" />
         </Box>
-        <Typography color="text.secondary" fontSize={"25px"} textAlign={"center"}>{title}</Typography>
-        <Typography pb={2} color="text.secondary" fontSize={"16px"} textAlign={"center"}>{description}</Typography>
+        <Typography color="text.secondary" fontSize={{xs: '20px', md: "25px"}} textAlign={"center"}>{title}</Typography>
+        <Typography pb={2} color="text.secondary" fontSize={{xs: '14px', md: "16px"}} textAlign={"center"}>{description}</Typography>
       </Box>
     </Grid>
   )

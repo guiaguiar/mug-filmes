@@ -13,9 +13,14 @@ export default function BigVideoSection({ title, title2, link, subtitle }: BigVi
   const theme = useTheme();
   return (
     <SectionBody>
-      <Box sx={{ pb: {xs: '20px', md: '80px'} }}>
-        <Typography textAlign="center" color="text.secondary" fontSize={{ xs: '42px', md: "50px" }} lineHeight={1} pb={3}>{title}</Typography>
-        <Typography textAlign="center" color="text.secondary" fontSize={{ xs: '42px', md: "50px" }} lineHeight={1} pb={3}>{title2}</Typography>
+      <Box display={{ xs: 'inherit', md: 'none' }} sx={{ pb: { xs: '0px', md: '80px' } }}>
+        <Typography textAlign="center" color="text.secondary" fontSize={{ xs: '38px', md: "50px" }} lineHeight={1} pb={3}>{`${title} ${title2}`}</Typography>
+        <Typography textAlign="center" color="text.secondary" fontSize={"20px"} lineHeight={1}>{subtitle}</Typography>
+      </Box>
+
+      <Box display={{ xs: 'none', md: 'inherit' }} sx={{ pb: { xs: '0px', md: '80px' } }}>
+        <Typography textAlign="center" color="text.secondary" fontSize={{ xs: '38px', md: "50px" }} lineHeight={1} pb={3}>{title}</Typography>
+        <Typography textAlign="center" color="text.secondary" fontSize={{ xs: '38px', md: "50px" }} lineHeight={1} pb={3}>{title2}</Typography>
         <Typography textAlign="center" color="text.secondary" fontSize={"20px"} lineHeight={1}>{subtitle}</Typography>
       </Box>
 
@@ -23,7 +28,7 @@ export default function BigVideoSection({ title, title2, link, subtitle }: BigVi
         width: '100%',
         height: 'calc(56.25vw)',
         maxHeight: '788.28px',
-        mb: '100px'
+        mb: { xs: '30px', md: '100px' }
       }}>
         <iframe src={`${link}?autoplay=0&loop=0&muted=0`} style={{
           position: 'absolute',

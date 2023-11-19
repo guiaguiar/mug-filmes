@@ -75,19 +75,24 @@ export default function ProjectsList() {
         sx={{
           display: "flex",
           justifyContent: 'center',
-          pb: '152px',
+          pb: { xs: '80px', md: '152px' },
         }}
       >
         <Grid container>
           <Grid item xs={12} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', pb: 8 }}>
-            <BudgetButton />
+            <Box display={{ xs: 'initial', md: 'none' }}>
+              <BudgetButton small />
+            </Box>
+            <Box display={{ xs: 'none', md: 'initial' }}>
+              <BudgetButton />
+            </Box>
           </Grid>
           <Typography
             pl={{ xs: '32px', md: '0px' }}
             pr={{ xs: '32px', md: '0px' }}
-            pb={'89px'}
+            pb={{ xs: '40px', md: '89px' }}
             color={theme.palette.text.secondary}
-            fontSize="50px"
+            fontSize={{ xs: '32px', md: "50px" }}
             textTransform={'uppercase'}
           >
             Outros Projetos
@@ -111,7 +116,7 @@ export default function ProjectsList() {
                 return null;
               }
               return (
-                <Box mr={2} key={i} sx={{ cursor: 'pointer' }} onClick={() => router.push(item.url)} marginLeft={i === 0 ? '20px' : '0px'}>
+                <Box mr={2} key={i} sx={{ cursor: 'pointer' }} onClick={() => router.push(item.url)} marginLeft={i === 0 || i === 1 && pathname === '/sanit-engenharia' ? '20px' : '0px'}>
                   <Box width={'270px'} height={'270px'}>
                     <Image quality={100} src={item.image} width={270} height={270} alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
                   </Box>

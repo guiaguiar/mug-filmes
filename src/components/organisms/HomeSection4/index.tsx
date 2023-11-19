@@ -79,10 +79,10 @@ export default function HomeSection4() {
             width: '100%',
             height: '100%',
             left: 0,
-            paddingLeft: 8,
-            paddingRight: 8
+            paddingLeft: {xs: 2, md: 8},
+            paddingRight: {xs: 2, md: 8}
           }}>
-            <Box pb="32px">
+            <Box pb="32px" display={{ xs: 'none', sm: 'initial' }}>
               <Typography color={'text.primary'} textTransform={'uppercase'} fontSize={{ xs: '24px', md: '36px' }}>Transformando</Typography>
               <Typography color={'text.primary'} fontWeight={300} textAlign='start' fontSize={{ xs: '60px', md: '150px', lg: '138px' }} style={{ lineHeight: 0.9, textTransform: 'uppercase' }}>
                 ideias em
@@ -92,11 +92,20 @@ export default function HomeSection4() {
               </Typography>
             </Box>
 
+            <Box pb="32px" display={{ xs: 'initial', sm: 'none' }}>
+              <Typography pb="8px" color={'text.primary'} fontWeight={200} textAlign='center' fontSize={25} style={{ lineHeight: 0.9, textTransform: 'uppercase' }}>
+                Transformando
+              </Typography>
+              <Typography pb="32px" color={'text.primary'} fontWeight={400} textAlign='center' fontSize={50} style={{ lineHeight: 1, textTransform: 'uppercase' }}>
+                ideias em realidade
+              </Typography>
+            </Box>
 
-            <Typography color={'text.primary'} fontSize={{xs: '16px', md: '18px'}} fontWeight={300} pb={4} textAlign="center">
+
+            <Typography color={'text.primary'} fontSize={{ xs: '16px', md: '18px' }} fontWeight={300} pb={4} textAlign="center">
               Apostamos em uma troca humanizada com as pessoas, colocando o cliente no centro de cada projeto. Nossa equipe oferece segurança e qualidade técnica, propondo soluções criativas que vão do roteiro à pós-produção.
             </Typography>
-            <Typography color={'text.primary'} fontSize={{xs: '16px', md: '18px'}} fontWeight={300} textAlign="center">
+            <Typography color={'text.primary'} fontSize={{ xs: '16px', md: '18px' }} fontWeight={300} textAlign="center">
               Com visão interdisciplinar a partir de multilinguagens, mergulhamos em temáticas diversas para criar <strong>obras que inspiram resultados</strong>. Capturamos a essência de cada projeto, criando uma identidade singular em cada filme produzido.
             </Typography>
           </Box>

@@ -41,7 +41,7 @@ export default function HomeSection2() {
           display: "flex",
           justifyContent: 'center',
           width: '100%',
-          pt: '100px',
+          pt: { xs: '60px', md: '100px' },
           // backgroundColor: theme.palette.secondary.main,
           zIndex: 0
         }}
@@ -74,18 +74,18 @@ export default function HomeSection2() {
               >
                 <Typography
                   fontWeight={300}
-                  style={{
+                  sx={{
                     color: theme.palette.text.secondary,
-                    fontSize: '22px',
+                    fontSize: { xs: '18px', md: '22px' },
                   }}
                 >
                   Do papel para as telas,
                 </Typography>
                 <Typography
                   fontWeight={300}
-                  style={{
+                  sx={{
                     color: theme.palette.text.secondary,
-                    fontSize: '22px',
+                    fontSize: { xs: '18px', md: '22px' },
                     paddingBottom: 164,
                     zIndex: -1
 
@@ -96,7 +96,7 @@ export default function HomeSection2() {
               </Box>
             </Grid>
 
-            <Box pt={8}>
+            <Box pt={{ xs: 2, md: 8 }}>
               <Typography
                 fontWeight={300}
                 sx={{
@@ -114,22 +114,22 @@ export default function HomeSection2() {
                 rowGap: '20px'
               }}>
 
-                <Typography fontSize={"18px"} color="text.secondary">
+                <Typography fontSize={{ xs: '16px', md: "18px" }} color="text.secondary">
                   Na MUG, <strong>somos apaixonados pela arte de contar histórias em movimento</strong>. Inspirados pela icônica obra &quot;The Horse in Motion&quot;, de Muybridge, acreditamos no audiovisual como ferramenta de imaginação e produção de conhecimento.
                 </Typography>
-                <Typography fontSize={"18px"} color="text.secondary">
+                <Typography fontSize={{ xs: '16px', md: "18px" }} color="text.secondary">
                   Com um olhar que atravessa horizontes, criamos narrativas que inspiram transformações. Somos uma produtora que acredita na pluralidade da arte e da cultura brasileira, traduzida por nós em cor, som e movimento.
                 </Typography>
-                <Typography fontSize={"18px"} color="text.secondary" pb="35px">
+                <Typography fontSize={{ xs: '16px', md: "18px" }} color="text.secondary" pb="35px">
                   Desenvolvemos conteúdos de relevância, em parceria com empresas, instituições, editais de incentivo público e privado. Atuamos entre São Paulo (SP) e Fortaleza (CE), produzindo filmes, institucionais, documentários e webséries.
                 </Typography>
-                <Typography fontSize={"18px"} color="text.secondary" pb="35px">
+                <Typography fontSize={{ xs: '16px', md: "18px" }} color="text.secondary" pb="35px">
                   Junte-se a nós, <strong>inspire-se e deixe sua marca no mundo com a MUG Filmes</strong>.
                 </Typography>
               </Box>
             </Box>
 
-            <Grid container item display="flex" justifyContent="center" pt={6} pb={12}>
+            <Grid container item display="flex" justifyContent="center" pt={6} pb={{xs: 6, md: 12}}>
               <IconCard url='/sanit-engenharia' title="INSTITUCIONAL" description="Transmita a essência do seu negócio e se destaque no mercado." />
               <IconCard url='/vila-das-artes' title="DOCUMENTÁRIO" description="Conte histórias relevantes e inspire transformações com seu projeto." />
               <IconCard url='/zona-de-criacao' title="WEBSÉRIE" description="Mergulhe em um universo plural por meio de conteúdos originais." />
@@ -137,7 +137,12 @@ export default function HomeSection2() {
             </Grid>
 
             <Grid item display="flex" justifyContent="center" xs={12} zIndex={2000000000}>
-              <BudgetButton />
+              <Box display={{ xs: 'initial', md: 'none' }}>
+                <BudgetButton small />
+              </Box>
+              <Box display={{ xs: 'none', md: 'initial' }}>
+                <BudgetButton />
+              </Box>
             </Grid>
 
           </Grid>
@@ -146,7 +151,7 @@ export default function HomeSection2() {
       </Box>
       <Box>
         <SectionBody backgroundColor={theme.palette.primary.main}>
-          <Typography pt={{xs: "40px", md: "82px"}} pb={{xs: "40px", md: "82px"}} textTransform={'uppercase'} fontSize={{ xs: '42px', md: "50px" }} color="text.primary" fontWeight={300}>
+          <Typography pt={{ xs: "40px", md: "82px" }} pb={{ xs: "40px", md: "82px" }} textTransform={'uppercase'} fontSize={{ xs: '38px', md: "50px" }} color="text.primary" fontWeight={300}>
             Nossos Parceiros
           </Typography>
           <Box pb="127px" display={{ xs: 'none', md: "flex" }} flexWrap="wrap" columnGap={4} rowGap={6} alignItems={"center"} justifyContent={"center"}>

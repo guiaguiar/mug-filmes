@@ -42,7 +42,7 @@ export default function Home() {
         descriptionComponent={
           <Typography
             color={theme.palette.text.secondary}
-            fontSize="18px"
+            fontSize={{ xs: '16', md: "18px" }}
           >
             A <span>Vila das Artes</span> nasce a partir da colaboração de artistas, gestores e pesquisadores dos campos da dança e do audiovisual. Este encontro resulta na criação de um espaço de formação artística interdisciplinar, orientado pelas necessidades da sociedade civil. O documentário busca resgatar essa história, por meio de entrevistas com os principais protagonistas e agentes envolvidos no projeto.
           </Typography>
@@ -55,7 +55,7 @@ export default function Home() {
         descriptionComponent={
           <Typography
             color={theme.palette.text.secondary}
-            fontSize="18px"
+            fontSize={{ xs: '16', md: "18px" }}
             textAlign='justify'
           >
             Em parceria com o Instituto Cultural Iracema, desenvolvemos um projeto para celebrar os <span>15 anos de existência do Complexo Cultural Vila das Artes</span>. O objetivo principal foi destacar a trajetória desse espaço, abordando suas diversas áreas de atuação, como as escolas de circo, dança, audiovisual e teatro. Como parte desse projeto, produzimos teasers que refletem as diretrizes de cada escola, bem como um vídeo institucional que apresenta a história e os desafios enfrentados por esse espaço cultural gerido pela Prefeitura de Fortaleza.
@@ -71,55 +71,55 @@ export default function Home() {
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               De quinze anos pra cá a Vila deixou
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               de ser semente para se tornar esse lugar de plantio.
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               Uma terra compartilhada, onde podemos semear utopias,
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               ressignificar memórias, partilhar afetos, pensamentos e
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               ideias de mundo, que pouco a pouco, se
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               enraízam profundamente dentro de nós.
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               Abrem espaço para novos caminhos,
             </Typography>
             <Typography
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               olhares e perspectivas.
             </Typography>
@@ -134,7 +134,7 @@ export default function Home() {
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
               textAlign='justify'
             >
               “Independente da vontade do poder público, a história da Vila das Artes é marcada como um lugar de encontro. Nesse sentido, ela passa a ser ocupada e esse processo de ocupação é a própria trajetória do Complexo Cultural Vila das Artes.”
@@ -142,7 +142,7 @@ export default function Home() {
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
               fontWeight={700}
             >
               Lenildo Gomes, Gestor Cultural

@@ -34,7 +34,7 @@ export default function ProjectZonaDeCriacao() {
         descriptionComponent={
           <Typography
             color={theme.palette.text.secondary}
-            fontSize="18px"
+            fontSize={{ xs: '16', md: "18px" }}
           >
             Webserie antológica composta por oito episódios, nos quais <span>artistas cearenses apresentam narrativas que exploram diferentes formas de expressão, como literatura, música, teatro, circo e dança</span>. A série oferece uma imersão nos territórios periféricos de Fortaleza, evidenciando a diversidade da produção artística local em uma perspectiva de experimentação de linguagem.
           </Typography>
@@ -47,7 +47,7 @@ export default function ProjectZonaDeCriacao() {
         descriptionComponent={
           <Typography
             color={theme.palette.text.secondary}
-            fontSize="18px"
+            fontSize={{ xs: '16', md: "18px" }}
             textAlign='justify'
           >
             Em parceria com o Porto Dragão, equipamento cultural gerido pelo Instituto Dragão do Mar, <strong>produzimos oito episódios da Websérie Zona de Criação</strong>, que atualmente está em sua quarta temporada. Neste projeto, contamos com uma equipe interdisciplinar composta por consultoria de acessibilidade, consultoria de roteiro e produtores culturais. A partir do processo de uma residência criativa, produzimos em conjunto com os artistas convidados filmes originais que são disponibilizados ao público em geral. O objetivo do trabalho é proporcionar uma experiência diversificada, explorando diversos temas e formas de expressão artística.

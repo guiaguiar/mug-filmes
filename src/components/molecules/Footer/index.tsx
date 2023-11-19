@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <Box sx={{
       backgroundColor: "primary.main",
-      minHeight: { xs: '520px', md: '380px' }
+      minHeight: { xs: '500px', md: '380px' }
     }}>
       <SectionBody>
         <Grid container
@@ -33,13 +33,16 @@ export default function Footer() {
             <Box sx={{
               display: "flex",
               flexDirection: "column",
+              pb: { xs: '32px', md: 0 }
             }}>
-              <Typography color="text.primary" fontSize={"50px"} lineHeight={1} textTransform="uppercase">TRABALHE </Typography>
-              <Typography color="text.primary" fontSize={"50px"} lineHeight={1} textTransform="uppercase">COM A GENTE</Typography>
+              <Typography textAlign={{ xs: 'center', md: 'start' }} color="text.primary" fontSize={{ xs: '38px', md: "50px" }} lineHeight={1} textTransform="uppercase">TRABALHE </Typography>
+              <Typography textAlign={{ xs: 'center', md: 'start' }} color="text.primary" fontSize={{ xs: '38px', md: "50px" }} lineHeight={1} textTransform="uppercase">COM A GENTE</Typography>
             </Box>
             <Box sx={{
               display: "flex",
-              flexDirection: "column",
+              flexDirection: { xs: 'row', md: "column" },
+              justifyContent: 'space-between',
+              pb: { xs: '16px', md: 0 }
             }}>
               <Box
                 onClick={() => window.open('https://www.instagram.com/mugfilmes/')}
@@ -47,7 +50,7 @@ export default function Footer() {
                   cursor: 'pointer'
                 }}
               >
-                <Typography fontSize={20} color="text.primary">
+                <Typography fontSize={{ xs: 16, md: 20 }} color="text.primary">
                   Instagram
                 </Typography>
               </Box>
@@ -57,7 +60,7 @@ export default function Footer() {
                   cursor: 'pointer'
                 }}
               >
-                <Typography fontSize={20} color="text.primary">
+                <Typography fontSize={{ xs: 16, md: 20 }} color="text.primary">
                   Vimeo
                 </Typography>
               </Box>
@@ -67,7 +70,7 @@ export default function Footer() {
                   cursor: 'pointer'
                 }}
               >
-                <Typography fontSize={20} color="text.primary">
+                <Typography fontSize={{ xs: 16, md: 20 }} color="text.primary">
                   Linkedin
                 </Typography>
               </Box>
@@ -75,9 +78,10 @@ export default function Footer() {
             <Box sx={{
               display: "flex",
               flexDirection: "column",
+              alignItems: { xs: "center", md: 'start' },
             }}>
-              <Typography color="text.primary" fontSize={"20px"}>(11) 98743 0299</Typography>
-              <Typography color="text.primary" fontSize={"20px"}>contato@mugfilmes.com</Typography>
+              <Typography color="text.primary" pb={{ xs: '16px', md: 0 }} fontSize={{ xs: 16, md: 20 }}>(11) 98743 0299</Typography>
+              <Typography color="text.primary" fontSize={{ xs: 16, md: 20 }}>contato@mugfilmes.com</Typography>
             </Box>
           </Grid>
           <Grid item xs={12} pt="50px">

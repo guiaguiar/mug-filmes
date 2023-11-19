@@ -1,4 +1,5 @@
 import logo from '@/assets/brand/MUG_Branco.png';
+import logoBlue from '@/assets/brand/MUG_Logo_Azul.png';
 import logoWhite from '@/assets/brand/MUG_Logo_Branco.png';
 import CustomButton from '@/components/atoms/CustomButton';
 import SectionBody from '@/components/atoms/SectionBody';
@@ -95,7 +96,7 @@ export default function Menu({ isHome }: MenuProps) {
         <Typography
           fontWeight={400}
           fontSize={"14px"}
-          pb={pb || '19px'}
+          mb={pb || '19px'}
           color={theme.palette.secondary.main}
           sx={{
             ':hover': {
@@ -160,7 +161,7 @@ export default function Menu({ isHome }: MenuProps) {
         {isHome ?
           <Image src={logoWhite} fill style={{ objectFit: 'contain' }} alt="" quality={100} priority />
           :
-          <Image src={logo} fill style={{ objectFit: 'contain' }} alt="" quality={100} priority />
+          <Image src={logoBlue} fill style={{ objectFit: 'contain' }} alt="" quality={100} priority />
         }
 
 
@@ -297,6 +298,7 @@ export default function Menu({ isHome }: MenuProps) {
                 onClick={() => {
                   if (isHome) {
                     document?.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
+                    setState(false)
                   } else {
                     router.push('/#about')
                   }
@@ -339,7 +341,7 @@ export default function Menu({ isHome }: MenuProps) {
               alignItems={"center"}
               justifyContent={"center"}
               flexDirection={"column"}
-              onClick={() => router.push('/')}
+              onClick={() => { router.push('/'); setState(false); }}
             >
               <Image src={logo} height={50} width={49} alt="" />
               <Typography pt={2} color="text.primary" fontSize={"12px"} fontWeight={400}>Mug Filmes 2023</Typography>

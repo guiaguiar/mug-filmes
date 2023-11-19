@@ -42,7 +42,7 @@ export default function Home() {
         descriptionComponent={
           <Typography
             color={theme.palette.text.secondary}
-            fontSize="18px"
+            fontSize={{ xs: '16', md: "18px" }}
           >
             A <span>Sanit Engenharia</span>, em parceria com o Consórcio Oeste, está realizando uma recuperação de rede de esgoto na Avenida Leste Oeste, em Fortaleza, Ceará. A empresa, pioneira no Brasil, utiliza métodos não destrutivos na realização de obras de alta complexidade, melhorando seu desempenho e reduzindo transtornos à população do entorno.
           </Typography>
@@ -55,7 +55,7 @@ export default function Home() {
         descriptionComponent={
           <Typography
             color={theme.palette.text.secondary}
-            fontSize="18px"
+            fontSize={{ xs: '16', md: "18px" }}
             textAlign='justify'
           >
             O filme institucional surge a partir do processo de documentação da obra de recuperação do Interceptor Oeste em Fortaleza. O objetivo principal desse trabalho é <span>evidenciar a inovação das empresas envolvidas no projeto, reforçando os aspectos ambientais, tecnológicos e sociais que permeiam essa empreitada de longo prazo</span>. Durante a produção, registramos as principais etapas de recuperação, além de conduzir entrevistas com os técnicos responsáveis e moradores locais. O filme oferece uma visão abrangente dessa importante iniciativa, destacando sua relevância e os impactos positivos para a comunidade e o meio ambiente.
@@ -71,62 +71,62 @@ export default function Home() {
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               O mundo está mudando.
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               Cidades são construídas cada vez mais rápido,
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               de forma sustentável e segura.
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               Na área da engenharia, tecnologias para
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               aumento da capacidade produtiva e
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               preservação do meio ambiente,
             </Typography>
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               foram aprimoradas através da
             </Typography>
             <Typography
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
               pb={2}
             >
               robótica e da engenharia
             </Typography>
             <Typography
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
             >
               da computação.
             </Typography>
@@ -141,7 +141,7 @@ export default function Home() {
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
               textAlign='justify'
             >
               “Buscamos, por meio de nossas obras, promover maior qualidade nas redes de água e esgoto do país, com ética, responsabilidade social e prazer em atender.”
@@ -149,7 +149,7 @@ export default function Home() {
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
               fontWeight={700}
             >
               Antônio Felipe, Auxiliar de Obra

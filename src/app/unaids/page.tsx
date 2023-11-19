@@ -42,7 +42,7 @@ export default function Home() {
         descriptionComponent={
           <Typography
             color={theme.palette.text.secondary}
-            fontSize="18px"
+            fontSize={{ xs: '16', md: "18px" }}
           >
             Em 2022, a Rede Nacional de Pessoas Vivendo com HIV e AIDS no Ceará (RNP+ CE) desenvolveu o projeto “Pessoas Vivendo com HIV/AIDS e Gestores: Diálogos PositHIVos Para Melhorar os Indicadores”, contemplado pelo Edital Fast-Track Cities, do UNAIDS Brasil. O projeto teve como objetivo <span>contribuir na disseminação de informações, aumentar a vinculação e a adesão ao tratamento</span> antirretroviral, assim como viabilizar o Indetectável = Intransmissível.
           </Typography>
@@ -55,7 +55,7 @@ export default function Home() {
         descriptionComponent={
           <Typography
             color={theme.palette.text.secondary}
-            fontSize="18px"
+            fontSize={{ xs: '16', md: "18px" }}
             textAlign='justify'
           >
             Neste projeto, realizado em parceria com UNAIDS Brasil, ficamos responsável pela <span>captação e edição do material do Edital Fast Track Cities</span>. A partir de um roteiro idealizado pela própria organização, fizemos uma imersão na sede da Rede Nacional de Pessoas Vivendo com HIV (RNP) no Ceará. Na ocasião, captamos depoimentos e relatos que ajudam a contribuir com o combate ao preconceito, conscientizando a população sobre a importância da prevenção e orientando pessoas que possuem HIV na adesão ao tratamento.
@@ -72,7 +72,7 @@ export default function Home() {
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
               textAlign='justify'
             >
               “É uma luta de mais de 25 anos, que vem ajudando muitas pessoas, na qual eu sou também um dos contemplados com essa política da Rede Nacional de Pessoas Vivendo com HIV (RNP).”
@@ -80,7 +80,7 @@ export default function Home() {
             <Typography
               pb={2}
               color={theme.palette.text.secondary}
-              fontSize="18px"
+              fontSize={{ xs: '16', md: "18px" }}
               fontWeight={700}
             >
               Carlos Salomão, Ativista Social
