@@ -6,11 +6,11 @@ import Image from 'next/image';
 
 
 import image1 from '@/assets/projects-card-images/1.jpg';
-import image2 from '@/assets/projects-card-images/2.jpg';
 import image3 from '@/assets/projects-card-images/3.jpg';
 import image4 from '@/assets/projects-card-images/4.jpg';
 import image5 from '@/assets/projects-card-images/5.jpg';
 import image6 from '@/assets/projects-card-images/6.jpg';
+import image2 from '@/assets/side-projects/zona-de-criacao/1.jpg';
 
 import BudgetButton from '@/components/atoms/BudgetButton';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
