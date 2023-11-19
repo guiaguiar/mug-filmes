@@ -1,4 +1,4 @@
-import logo from '@/assets/brand/MUG_Logo_Azul.png';
+import logo from '@/assets/brand/MUG_Branco.png';
 import logoWhite from '@/assets/brand/MUG_Logo_Branco.png';
 import CustomButton from '@/components/atoms/CustomButton';
 import SectionBody from '@/components/atoms/SectionBody';
@@ -259,7 +259,7 @@ export default function Menu({ isHome }: MenuProps) {
             <IconButton
               sx={{
                 svg: {
-                  fill: 'white'
+                  fill: isHome ? 'white' : theme.palette.primary.main
                 }
               }}
               onClick={() => setState(true)}
@@ -306,14 +306,43 @@ export default function Menu({ isHome }: MenuProps) {
                   Sobre
                 </Typography>
               </Box>
-              <Typography pb="8px" fontWeight={700} color={"text.primary"} pt="8px">
+              <Typography pb="16px" fontWeight={700} color={"text.primary"} pt="8px">
                 Projetos
               </Typography>
               <Box pl="16px">
                 {projects.map(item => {
-                  return <ListItem pb="8px" key={item.title} title={item.title} url={item.url} />
+                  return <ListItem pb="16px" key={item.title} title={item.title} url={item.url} />
                 })}
               </Box>
+              <Box
+                position="relative"
+                sx={{
+                  cursor: 'pointer',
+                  alignItems: 'center',
+                  display: 'flex',
+                }}
+                onClick={() => { }}
+              >
+                <Typography fontWeight={700} color={"text.primary"} pt="8px" pb="16px">
+                  Faça seu orçamento
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                backgroundColor: theme.palette.primary.main,
+                cursor: 'pointer',
+                pb: 4
+              }}
+              position={'relative'}
+              display="flex"
+              alignItems={"center"}
+              justifyContent={"center"}
+              flexDirection={"column"}
+              onClick={() => router.push('/')}
+            >
+              <Image src={logo} height={50} width={49} alt="" />
+              <Typography pt={2} color="text.primary" fontSize={"12px"} fontWeight={400}>Mug Filmes 2023</Typography>
             </Box>
           </Drawer>
         </React.Fragment>
