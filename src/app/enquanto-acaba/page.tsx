@@ -48,7 +48,7 @@ export default function Home() {
           </Typography>
         }
       />
-      <BigVideoSection link='https://player.vimeo.com/video/ ' title="Como inventar uma memória com os restos?" />
+      <BigVideoSection link='https://player.vimeo.com/video/879891250' title="Como inventar uma memória com os restos?" />
       <ProjectDescription
         title1='O que'
         title2='Produzimos'

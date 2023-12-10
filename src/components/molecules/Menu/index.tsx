@@ -251,7 +251,7 @@ export default function Menu({ isHome }: MenuProps) {
               }
             </Box>
             {/* do not change for BudgetButton */}
-            <CustomButton label='FAÇA SEU ORÇAMENTO' />
+            <CustomButton label='FAÇA SEU ORÇAMENTO' onClick={() => window.open('https://api.whatsapp.com/send/?phone=5511981240817&text&type=phone_number&app_absent=0')} />
           </Box>
           <Box display={{ xs: 'flex', lg: 'none' }} sx={{
             alignItems: 'center',
@@ -323,7 +323,7 @@ export default function Menu({ isHome }: MenuProps) {
                   alignItems: 'center',
                   display: 'flex',
                 }}
-                onClick={() => { }}
+                onClick={() => window.open('https://api.whatsapp.com/send/?phone=5511981240817&text&type=phone_number&app_absent=0')}
               >
                 <Typography fontWeight={700} color={"text.primary"} pt="8px" pb="16px">
                   Faça seu orçamento
