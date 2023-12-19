@@ -1,6 +1,6 @@
 "use client"
 
-import { Box, Typography, useTheme } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 import image1 from '@/assets/side-projects/carrossel/1.jpg';
 import image2 from '@/assets/side-projects/carrossel/2.jpg';
@@ -20,18 +20,7 @@ import React, { useState } from 'react';
 
 
 export default function HomeSection4() {
-  const theme = useTheme();
   const [count, setCount] = useState<number>(0);
-  const images = [
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8
-  ]
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -54,14 +43,14 @@ export default function HomeSection4() {
             },
           }}
         >
-          <Image quality={100} src={image1} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 0 ? 1 : 0 }} alt="" />
-          <Image quality={100} src={image2} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 1 ? 1 : 0 }} alt="" />
-          <Image quality={100} src={image3} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 2 ? 1 : 0 }} alt="" />
-          <Image quality={100} src={image4} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 3 ? 1 : 0 }} alt="" />
-          <Image quality={100} src={image5} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 4 ? 1 : 0 }} alt="" />
-          <Image quality={100} src={image6} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 5 ? 1 : 0 }} alt="" />
-          <Image quality={100} src={image7} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 6 ? 1 : 0 }} alt="" />
-          <Image quality={100} src={image8} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 7 ? 1 : 0 }} alt="" />
+          <Image src={image1} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 0 ? 1 : 0 }} alt="" />
+          <Image src={image2} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 1 ? 1 : 0 }} alt="" />
+          <Image src={image3} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 2 ? 1 : 0 }} alt="" />
+          <Image src={image4} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 3 ? 1 : 0 }} alt="" />
+          <Image src={image5} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 4 ? 1 : 0 }} alt="" />
+          <Image src={image6} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 5 ? 1 : 0 }} alt="" />
+          <Image src={image7} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 6 ? 1 : 0 }} alt="" />
+          <Image src={image8} fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1, opacity: count === 7 ? 1 : 0 }} alt="" />
         </Box>
         <Box sx={{ height: '100%', backgroundColor: '#01020180', width: '100%', position: 'absolute', }} />
 
@@ -102,7 +91,7 @@ export default function HomeSection4() {
             </Box>
 
 
-            <Typography color={'text.primary'} fontSize={{ xs: '16px', md: '18px' }} fontWeight={300} pb={4} textAlign="center">
+            <Typography pt={{xs: '0px', md: 4}} color={'text.primary'} fontSize={{ xs: '16px', md: '18px' }} fontWeight={300} pb={4} textAlign="center">
               Apostamos em uma troca humanizada com as pessoas, colocando o cliente no centro de cada projeto. Nossa equipe oferece segurança e qualidade técnica, propondo soluções criativas que vão do roteiro à pós-produção.
             </Typography>
             <Typography color={'text.primary'} fontSize={{ xs: '16px', md: '18px' }} fontWeight={300} textAlign="center">

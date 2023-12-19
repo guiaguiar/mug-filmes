@@ -49,8 +49,6 @@ const images = [
   }
 ]
 
-
-
 export default function ProjectsList() {
   const theme = useTheme();
   const pathname = usePathname();
@@ -68,6 +66,8 @@ export default function ProjectsList() {
     let slider = document.getElementById("slider");
     if (!!slider) slider.scrollLeft = slider.scrollLeft + 400;
   };
+
+
 
   return (
     <SectionBody paddingRight={{ xs: '0px', md: '64px' }} paddingLeft={{ xs: '0px', md: '64px' }}>

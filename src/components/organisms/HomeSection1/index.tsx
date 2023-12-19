@@ -1,12 +1,24 @@
+"use client"
 import SectionBody from '@/components/atoms/SectionBody';
 import { Box, Typography, useTheme } from '@mui/material';
 
 import BudgetButton from '@/components/atoms/BudgetButton';
-// import image from '@/../public/'
-
+import { useWindowSize } from "@uidotdev/usehooks";
+import { useEffect, useState } from 'react';
 
 export default function HomeSection1() {
   const theme = useTheme();
+  const [videoSrc, setVideoSrc] = useState('');
+  const size = useWindowSize();
+
+  useEffect(() => {
+    if (size.width && size.width <= 764) {
+      setVideoSrc('home-gif-764.mp4');
+    } else {
+      setVideoSrc('home-gif.mp4');
+    }
+  }, [size?.width]);
+
   return (
     <Box
       sx={{
@@ -25,7 +37,7 @@ export default function HomeSection1() {
           overflow: 'hidden',
         }}
       >
-        <video loop playsInline muted autoPlay src="home-gif.mp4" style={{ objectFit: 'cover', height: '100vh', width: '100%' }} />
+        <video loop playsInline muted autoPlay src={videoSrc} style={{ objectFit: 'cover', height: '100vh', width: '100%' }} />
       </Box>
       <Box sx={{ height: '100vh', backgroundColor: '#01020180', width: '100%', position: 'absolute', }}></Box>
       <SectionBody>

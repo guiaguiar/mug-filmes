@@ -29,6 +29,11 @@ interface imagesInterface {
   }
 }
 
+interface currentImageInterface{
+  image: any;
+  isOpening: boolean;
+}
+
 const IconCard: React.FC<IconCardProps> = ({ title, description, url }) => {
   const images: imagesInterface = {
     'INSTITUCIONAL': {
@@ -48,12 +53,14 @@ const IconCard: React.FC<IconCardProps> = ({ title, description, url }) => {
       closing: webClosing
     }
   }
-  const [currentImage, setCurrentImage] = useState(selectImage(title, true));
+  const [currentImage, setCurrentImage] = useState<currentImageInterface>({image: images[title].opening, isOpening: true});
   const router = useRouter();
 
   function selectImage(title: any, isOpening: boolean) {
-    if (isOpening) return images[title].opening;
-    return images[title].closing;
+    if(currentImage?.isOpening !== isOpening){
+      if (isOpening) return images[title].opening;
+      return images[title].closing;
+    }
   }
 
   return (
@@ -79,8 +86,8 @@ const IconCard: React.FC<IconCardProps> = ({ title, description, url }) => {
         onClick={() => router.push(url)}
       >
         <Box
-          onMouseEnter={() => setCurrentImage(selectImage(title, false))}
-          onMouseLeave={() => setCurrentImage(selectImage(title, true))}
+          onMouseEnter={() => setCurrentImage({image: selectImage(title, false), isOpening: false})}
+          onMouseLeave={() => setCurrentImage({image: selectImage(title, true), isOpening: true})}
           sx={{
             display: 'flex',
             alignItems: 'center',
@@ -88,10 +95,10 @@ const IconCard: React.FC<IconCardProps> = ({ title, description, url }) => {
             width: '110px',
             height: '110px',
             pb: 2,
-            zIndex: 10
+            zIndex: 10,
           }}
         >
-          <Image quality={100} src={currentImage} width={104} height={104} alt="" />
+          <Image src={currentImage.image} width={104} height={104} alt="" />
         </Box>
         <Typography color="text.secondary" fontSize={{ xs: '20px', md: "25px" }} textAlign={"center"}>{title}</Typography>
         <Typography pb={2} color="text.secondary" fontSize={{ xs: '14px', md: "16px" }} textAlign={"center"}>{description}</Typography>

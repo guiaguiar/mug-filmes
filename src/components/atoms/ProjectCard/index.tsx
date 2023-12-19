@@ -1,8 +1,9 @@
 "use client"
 import { Box, Grid, Typography } from '@mui/material';
+import { useWindowSize } from "@uidotdev/usehooks";
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface IconCardProps {
   title?: string;
@@ -14,6 +15,15 @@ interface IconCardProps {
 const ProjectCard: React.FC<IconCardProps> = ({ title, imageName, url, subtitle }) => {
   const [hover, setHover] = useState<boolean>(false);
   const router = useRouter();
+  const size = useWindowSize();
+
+  useEffect(() => {
+    if (size.width && size.width < 764) {
+      setHover(true);
+    }else{
+      setHover(false);
+    }
+  }, [size]);
 
   return (
     <Grid
@@ -28,7 +38,7 @@ const ProjectCard: React.FC<IconCardProps> = ({ title, imageName, url, subtitle 
         onClick={() => router.push(url)}
         sx={{
           position: 'relative',
-          minHeight: {xs: '300px', sm: '400px', md: '300px', lg: '330px', xl: '430px'},
+          minHeight: { xs: '300px', sm: '400px', md: '300px', lg: '330px', xl: '430px' },
           height: '100%',
           overflow: 'hidden',
           cursor: 'pointer'

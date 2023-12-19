@@ -46,10 +46,10 @@ export default function HomeSection2() {
           zIndex: 0
         }}
       >
-        <Image quality={100} src={patternImage} fill style={{ zIndex: -12, objectFit: 'cover', opacity: 0.4 }} alt="" />
+        <Image src={patternImage} fill style={{ zIndex: -12, objectFit: 'cover', opacity: 0.4 }} alt="" />
 
         <Box height={"112px"} width="3600px" position={'absolute'} zIndex={2000} display={{ xs: 'none', sm: 'initial' }} marginLeft={{ xs: '-3500px', sm: '-3700px', lg: '-3316px' }}>
-          <Image quality={100} src={grafismoRight} fill style={{ zIndex: 30000, objectFit: 'cover', alignSelf: 'end' }} alt="" />
+          <Image src={grafismoRight} fill style={{ zIndex: 30000, objectFit: 'cover', alignSelf: 'end' }} alt="" />
         </Box>
         <SectionBody>
           <Grid container pb={{ xs: '80px', md: "140px" }} zIndex={2000}>

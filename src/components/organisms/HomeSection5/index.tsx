@@ -19,7 +19,7 @@ export default function HomeSection5() {
         overflow: 'hidden',
       }}
     >
-      <Image quality={100} src={patternImage} fill style={{ zIndex: 0, objectFit: 'cover', opacity: 0.7 }} alt="" />
+      <Image src={patternImage} fill style={{ zIndex: 0, objectFit: 'cover', opacity: 0.7 }} alt="" />
 
       <SectionBody>
         <Grid container pb={{xs: '90px', md: "158px"}} pt={{ xs: '80px', md: "177px" }}>
@@ -28,11 +28,11 @@ export default function HomeSection5() {
           flexDirection: 'column',
         }}>
           <Box height={"112px"} width="3600px" position={'absolute'} zIndex={2000} display={{ xs: 'none', sm: 'initial' }} marginLeft={{ xs: '-3500px', sm: '-3700px', lg: '-3000px' }} mt={18}>
-            <Image quality={100} src={grafismoRight} fill style={{ zIndex: 30000, objectFit: 'cover', alignSelf: 'end' }} alt="" />
+            <Image src={grafismoRight} fill style={{ zIndex: 30000, objectFit: 'cover', alignSelf: 'end' }} alt="" />
           </Box>
           <Typography textAlign={'start'} textTransform={'uppercase'} color={theme.palette.text.secondary} fontSize={70} fontWeight={300}>Tá faltando o que</Typography>
           <Box height={"112px"} width="3600px" position={'absolute'} zIndex={2000} display={{ xs: 'none', sm: 'initial' }} marginLeft={{ xs: '-4000px', sm: '750px' }}>
-            <Image quality={100} src={grafismoRight} fill style={{ zIndex: 30000, objectFit: 'cover', alignSelf: 'end', rotate: '180deg' }} alt="" />
+            <Image src={grafismoRight} fill style={{ zIndex: 30000, objectFit: 'cover', alignSelf: 'end', rotate: '180deg' }} alt="" />
           </Box>
           <Typography textAlign={'end'} textTransform={'uppercase'} color={theme.palette.text.secondary} fontSize={70} fontWeight={300} pb="80px" pt={5}>pra começar?</Typography>
         </Grid>

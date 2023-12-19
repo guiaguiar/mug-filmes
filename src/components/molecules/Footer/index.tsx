@@ -80,7 +80,7 @@ export default function Footer() {
               flexDirection: "column",
               alignItems: { xs: "center", md: 'start' },
             }}>
-              <Typography color="text.primary" pb={{ xs: '16px', md: 0 }} fontSize={{ xs: 16, md: 20 }}>(11) 98743 0299</Typography>
+              <Typography color="text.primary" pb={{ xs: '16px', md: 0 }} fontSize={{ xs: 16, md: 20 }}>(11) 98124-0817</Typography>
               <Typography color="text.primary" fontSize={{ xs: 16, md: 20 }}>contato@mugfilmes.com</Typography>
             </Box>
           </Grid>

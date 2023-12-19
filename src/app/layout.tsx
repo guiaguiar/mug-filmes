@@ -1,3 +1,4 @@
+import WhatsappButton from '@/components/atoms/WhatsappButton';
 import type { Metadata } from 'next';
 import './globals.css';
 import ThemeProvider from './materialTheme';
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider>
+          <WhatsappButton />
           {children}
         </ThemeProvider>
       </body>

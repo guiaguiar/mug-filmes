@@ -55,7 +55,7 @@ export default function ProjectHomeSection({ descriptionComponent, title, subtit
       <Box height={400} width={'100%'}>
         <SectionBodyFullScreen>
           <Box height={400} width={'100%'} position={'relative'} overflow={'hidden'}>
-            <Image src={img} alt="banner" fill style={{ objectFit: 'cover', objectPosition: imgPosition || 'bottom' }} quality={100} />
+            <Image src={img} alt="banner" fill style={{ objectFit: 'cover', objectPosition: imgPosition || 'bottom' }} />
           </Box>
         </SectionBodyFullScreen>
       </Box>

@@ -4,7 +4,7 @@ import logoWhite from '@/assets/brand/MUG_Logo_Branco.png';
 import CustomButton from '@/components/atoms/CustomButton';
 import SectionBody from '@/components/atoms/SectionBody';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Box, Drawer, IconButton, Link, Typography, useTheme } from '@mui/material';
+import { Box, Drawer, Fade, IconButton, Link, Typography, useTheme } from '@mui/material';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
@@ -159,9 +159,9 @@ export default function Menu({ isHome }: MenuProps) {
     }}>
       <Box display={'flex'} position="relative" width={{ xs: "150px", md: "230px" }} minWidth={{ xs: "150px", md: "230px" }} alignItems={'center'} left={"44px"} onClick={() => router.push('/')} sx={{ cursor: isHome ? 'initial' : 'pointer', zIndex: 1 }}>
         {isHome ?
-          <Image src={logoWhite} fill style={{ objectFit: 'contain' }} alt="" quality={100} priority />
+          <Image src={logoWhite} fill style={{ objectFit: 'contain' }} alt="" priority />
           :
-          <Image src={logoBlue} fill style={{ objectFit: 'contain' }} alt="" quality={100} priority />
+          <Image src={logoBlue} fill style={{ objectFit: 'contain' }} alt="" priority />
         }
 
 
@@ -210,45 +210,72 @@ export default function Menu({ isHome }: MenuProps) {
                 pt="8px"
                 fontWeight={isDropdownVisible ? 700 : 400}
                 sx={{
-                  backgroundColor: isDropdownVisible ? theme.palette.primary.main : 'transparent',
+                  // backgroundColor: isDropdownVisible ? theme.palette.primary.main : 'transparent',
                   color: isHome || isDropdownVisible ? "text.primary" : "text.secondary",
                   border: 'none',
                   borderRadius: 0,
                   boxShadow: 'none',
-                  transition: 'none',
                   width: '156px',
                   textTransform: 'none',
+                  transition: '0.2s',
                   ':hover': {
                     backgroundColor: theme.palette.primary.main,
+                    transition: '0.1s',
                     border: 'none',
                     boxShadow: 'none',
                     borderRadius: 0,
-                    transition: 'none'
                   },
                 }}
               >
                 projetos
+
               </Typography>
-              {isDropdownVisible
-                &&
+
+              <Fade in={isDropdownVisible} timeout={200}>
                 <Box
                   sx={{
                     background: theme.palette.primary.main,
                     boxShadow: ' 0px 10px 30px 0px rgba(82, 63, 105, 0.05)',
-                    transition: 'all linear 0.3s',
+                    transition: 'none',
                     position: 'absolute',
                     width: '156px',
                     display: 'flex',
                     flexDirection: 'column',
                     pl: '19px',
-                    pt: '8px'
+                    top: 0
                   }}
                 >
+                  <Typography
+                    pt="8px"
+                    pb="8px"
+                    fontWeight={isDropdownVisible ? 700 : 400}
+                    sx={{
+                      color: isHome || isDropdownVisible ? "text.primary" : "text.secondary",
+                      border: 'none',
+                      borderRadius: 0,
+                      boxShadow: 'none',
+                      width: '156px',
+                      textTransform: 'none',
+                      transition: '0.2s',
+                      ':hover': {
+                        transition: '0.1s',
+                        border: 'none',
+                        boxShadow: 'none',
+                        borderRadius: 0,
+                      },
+                    }}
+                  >
+                    projetos
+
+                  </Typography>
                   {projects.map(item => {
                     return <ListItem pb="8px" key={item.title} title={item.title} url={item.url} />
                   })}
                 </Box>
-              }
+              </Fade>
+
+
+
             </Box>
             {/* do not change for BudgetButton */}
             <CustomButton label='FAÇA SEU ORÇAMENTO' onClick={() => window.open('https://api.whatsapp.com/send/?phone=5511981240817&text&type=phone_number&app_absent=0')} />
